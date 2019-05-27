@@ -3,7 +3,7 @@ server:
 spring:
 #  profiles: dev
   application:
-    name: Hacker-govern-center # 指定服务名
+    name: Hacker-govern-model # 指定服务名
 
 eureka:
   client:

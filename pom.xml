@@ -13,7 +13,7 @@
 
     <!--子项目-->
     <modules>
-        <module>Hacker-framework-common</module>
+        <!--<module>Hacker-framework-common</module>-->
         <module>Hacker-framework-model</module>
         <module>Hacker-framework-util</module>
         <module>Hacker-service-channel-manage</module>
@@ -46,6 +46,13 @@
         </dependency>
         <!--启动-->
 
+        <!--lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.8</version>
+        </dependency>
+        <!--lombok-->
 
         <!--mybatis-->
         <dependency>
