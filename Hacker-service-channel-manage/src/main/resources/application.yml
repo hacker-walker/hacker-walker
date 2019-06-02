@@ -1,4 +1,4 @@
-#数据库-------》jinnian
+#数据库-------》J X N H
 spring:
   profiles: dev
   datasource:
@@ -19,44 +19,13 @@ spring:
     host: localhost
     port: 6379
     password: root
-    timeout: 123456
+    timeout: 123
     lettuce:
       pool:
         max-active: 200
         max-idle: 50
         min-idle: 24
         max-wait: 2000
-
----
-
-
-spring:
-  profiles: prepub
-  datasource:
-    type: com.alibaba.druid.pool.DruidDataSource
-    druid:
-      url: jdbc:mysql://localhost:3306/jinnian?useSSL=false&useUnicode=true&characterEncoding=utf-8
-      username: root
-      password: 123
-      driver-class-name: com.mysql.jdbc.Driver
-      max-wait: 10000
-      initialSize: 8
-      min-idle: 0
-      max-active: 20
-      test-on-borrow: true
-
-  redis:
-    host: localhost
-    port: 6379
-    password: root
-    timeout: 123456
-    lettuce:
-      pool:
-        max-active: 200
-        max-idle: 50
-        min-idle: 24
-        max-wait: 2000
-
 
 ---
 
@@ -79,7 +48,7 @@ spring:
     host: localhost
     port: 6379
     password: root
-    timeout: 123456
+    timeout: 123
     lettuce:
       pool:
         max-active: 200
