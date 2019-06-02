@@ -19,6 +19,9 @@
         <module>Hacker-service-channel-manage</module>
         <module>Hacker-govern-center</module>
         <module>Hacker-govern-gateway</module>
+        <module>Hacker-framework-common</module>
+        <!--<module>Hacker-framework-common</module>-->
+
     </modules>
 
     <!--jdk-->
