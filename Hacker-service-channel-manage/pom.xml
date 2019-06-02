@@ -16,9 +16,22 @@
     <artifactId>Hacker-service-channel-manage</artifactId>
     <!--子类-->
 
-    <dependencies>
+        <dependencies>
 
-    </dependencies>
+             <!--druid-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-autoconfigure</artifactId>
+                <version>1.2.10</version>
+            </dependency>
+            <!-- druid -->
+
+        </dependencies>
 
     <build>
         <finalName>Hacker-service-channel-manage</finalName>
