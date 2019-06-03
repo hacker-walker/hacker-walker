@@ -1,4 +1,4 @@
-package hacker.framework.common.config;
+package hacker.channel.manage.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

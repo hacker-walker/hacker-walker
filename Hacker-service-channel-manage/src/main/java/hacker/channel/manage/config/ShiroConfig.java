@@ -1,5 +1,4 @@
-package hacker.framework.common.config;
-
+package hacker.channel.manage.config;
 
 import org.apache.shiro.cache.ehcache.EhCacheManager;
 import org.apache.shiro.mgt.SecurityManager;
@@ -19,7 +18,7 @@ import java.util.Map;
  * @Description: J X N H
  * @EnglishName LuKe
  * @authod LiuQi
- * @date 2019/6/3 11:44
+ * @date 2019/6/3 16:44
  */
 @Configuration
 public class ShiroConfig {
@@ -71,6 +70,7 @@ public class ShiroConfig {
         ehCacheManager.setCacheManagerConfigFile("classpath:ehcache.xml");
         return ehCacheManager;
     }
+
     //************************************* 以下是对shiro注解的支持  *****************************************//
 
     @Bean

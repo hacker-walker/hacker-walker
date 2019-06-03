@@ -1,4 +1,4 @@
-package hacker.framework.common.config;
+package hacker.channel.manage.config;
 
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;

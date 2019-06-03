@@ -1,4 +1,5 @@
-package hacker.framework.common.config;
+package hacker.channel.manage.config;
+
 
 import hacker.framework.common.annotation.Constants;
 import org.slf4j.Logger;

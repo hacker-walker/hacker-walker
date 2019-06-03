@@ -35,14 +35,6 @@
         </dependency>
         <!--model-->
 
-        <!--manage-->
-        <dependency>
-            <groupId>Hacker.walker</groupId>
-            <artifactId>Hacker-service-channel-manage</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-        <!--manage-->
     </dependencies>
 
 </project>

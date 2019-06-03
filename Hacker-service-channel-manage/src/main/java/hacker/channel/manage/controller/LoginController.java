@@ -8,13 +8,16 @@ import hacker.framework.util.SHA256;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.AuthenticationToken;
+import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
-import javax.security.auth.Subject;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+
 
 /**
  * admin用户登陆界面
@@ -36,6 +39,7 @@ public class LoginController {
     //slat
     @Value("${salt}")
     private String slat;
+
 
     /**
      * 登陆
@@ -96,6 +100,7 @@ public class LoginController {
             return new BaseResult("500","退出失败",0);
         }
     }
+
 
 
     /**

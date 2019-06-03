@@ -1,4 +1,4 @@
-package hacker.framework.common.config;
+package hacker.channel.manage.config;
 
 
 import lombok.extern.slf4j.Slf4j;

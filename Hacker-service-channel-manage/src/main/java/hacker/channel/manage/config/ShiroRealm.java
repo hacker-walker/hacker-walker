@@ -1,4 +1,4 @@
-package hacker.framework.common.config;
+package hacker.channel.manage.config;
 
 import hacker.channel.manage.service.AdminService;
 import hacker.channel.manage.service.PermissionService;
