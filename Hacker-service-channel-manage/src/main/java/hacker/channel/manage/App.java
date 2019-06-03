@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @SpringBootApplication
 // 扫描common、util下的所有类
-@ComponentScans(@ComponentScan("hacker"))
+@ComponentScans(@ComponentScan("hacker.framework.common"))
 // 扫描实体类
 @EntityScan("hacker.framework.model")
 //扫描接口

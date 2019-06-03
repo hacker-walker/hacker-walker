@@ -18,7 +18,23 @@
 
         <dependencies>
 
+            <!--common-->
+            <dependency>
+                <groupId>Hacker.walker</groupId>
+                <artifactId>Hacker-framework-common</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <scope>compile</scope>
+            </dependency>
+            <!--common-->
 
+            <!--model-->
+            <dependency>
+                <groupId>Hacker.walker</groupId>
+                <artifactId>Hacker-framework-model</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <scope>compile</scope>
+            </dependency>
+            <!--model-->
         </dependencies>
 
     <build>
