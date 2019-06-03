@@ -1,6 +1,5 @@
 package hacker.channel.manage;
 
-import com.github.pagehelper.autoconfigure.PageHelperAutoConfiguration;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ComponentScans;
 
 
-@SpringBootApplication(exclude = {PageHelperAutoConfiguration.class})
+@SpringBootApplication
 // 扫描common、util下的所有类
 @ComponentScans(@ComponentScan("hacker"))
 // 扫描实体类
