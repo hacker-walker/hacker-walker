@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="hacker.channel.manage.mapper.AdminMapper">
+    <resultMap id="BaseResultMap" type="hacker.framework.model.entity.Admin">
+        <result column="id" jdbcType="INTEGER" property="id"/>
+        <result column="phone" jdbcType="VARCHAR" property="phone"/>
+        <result column="nickname" jdbcType="VARCHAR" property="nickname"/>
+        <result column="username" jdbcType="VARCHAR" property="username"/>
+        <result column="password" jdbcType="VARCHAR" property="password"/>
+        <result column="status" jdbcType="INTEGER" property="status"/>
+        <result column="is_readonly" jdbcType="INTEGER" property="is_readonly"/>
+        <result column="last_login_token" jdbcType="VARCHAR" property="last_login_token"/>
+        <result column="last_login_ip" jdbcType="VARCHAR" property="last_login_ip"/>
+        <result column="login_at" jdbcType="TIMESTAMP" property="login_at"/>
+        <result column="created_at" jdbcType="TIMESTAMP" property="created_at"/>
+        <result column="updated_at" jdbcType="TIMESTAMP" property="updated_at"/>
+    </resultMap>
+
+    <!--查询用户名-->
+    <select id="findByName" parameterType="hacker.framework.model.entity.Admin" resultMap="BaseResultMap">
+
+     SELECT * FROM sun_admin WHERE username =#{username} AND STATUS = 1
+    </select>
+
+    <!--通过id修改用户的状态-->
+    <update id="updateUserStatus" parameterType="hacker.framework.model.entity.Admin">
+
+      UPDATE sun_admin SET last_login_ip = #{last_login_ip},
+              last_login_token = #{last_login_token},
+              login_at = #{login_at} WHERE id = #{id}
+        </update>
+
+    <!--通过id删除当前管理员-->
+    <delete id="deleteAdminRole" parameterType="hacker.framework.model.entity.Admin">
+
+        delete from sun_admin_role where admin_id = #{id}
+    </delete>
+
+    <!--批量插入,分配用户角色-->
+    <insert id="setRoles" parameterType="hacker.framework.model.Cto.AdminRoles">
+
+        INSERT INTO sun_admin_role (admin_id, role_id) VALUES
+        <foreach collection='list' item='item' separator=','>
+            (#{item.uid},#{item.role})
+        </foreach>
+    </insert>
+</mapper>

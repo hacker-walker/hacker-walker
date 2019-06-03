@@ -35,7 +35,7 @@ public class LimiterAspect {
     /**
      * @param point
      */
-    @Around("@annotation(com.minghao.framework.common.annotation.Limiter)")
+    @Around("@annotation(hacker.framework.common.annotation.Limiter)")
     public Object around(ProceedingJoinPoint point) throws Throwable {
 
         // requestPath

@@ -1,5 +1,6 @@
 package hacker.framework.common.annotation;
 
+
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -17,12 +18,6 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD)
 public @interface Limiter {
 
-//    /**
-//     * 限流route      默认取当前servletPath
-//     *
-//     * @return
-//     */
-//    String value() default "";
 
     /**
      * 限流次数，配合expire使用      默认：1次/s

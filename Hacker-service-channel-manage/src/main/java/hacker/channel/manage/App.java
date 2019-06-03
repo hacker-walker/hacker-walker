@@ -1,12 +1,20 @@
 package hacker.channel.manage;
 
+import com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean;
+import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.beans.BeansException;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ComponentScans;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.sql.DataSource;
 
 
 @SpringBootApplication
@@ -18,7 +26,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @MapperScan("hacker.channel.manage.mapper")
 //mapper
 @RequestMapping(value = "/")
-public class App {
+public class App implements ApplicationContextAware {
 
     public static void main(String[] args) {
 
@@ -26,6 +34,21 @@ public class App {
 
         System.out.println("代码开源不易，且珍惜!");
         System.out.println("2019年，祝每一个努力的人都有所收获");
+    }
+
+    //applicationContext
+    private ApplicationContext applicationContext;
+    @Override
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+        this.applicationContext = applicationContext;
+    }
+
+    //加载dataSource
+    @Bean
+    public SqlSessionFactory sqlSessionFactory() throws Exception {
+        MybatisSqlSessionFactoryBean sessionFactoryBean = new MybatisSqlSessionFactoryBean();
+        sessionFactoryBean.setDataSource((DataSource) applicationContext.getBean("dataSource"));
+        return sessionFactoryBean.getObject();
     }
 
 }

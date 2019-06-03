@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="hacker.channel.manage.mapper.RoleMapper">
+    <resultMap id="BaseResultMap" type="hacker.framework.model.entity.Role">
+        <result column="id" jdbcType="INTEGER" property="id"/>
+        <result column="display_name" jdbcType="VARCHAR" property="display_name"/>
+        <result column="level" jdbcType="INTEGER" property="level"/>
+        <result column="created_at" jdbcType="TIMESTAMP" property="created_at"/>
+        <result column="updated_at" jdbcType="TIMESTAMP" property="updated_at"/>
+    </resultMap>
+
+
+    <!--查询用户的角色-->
+    <select id="queryRolesUser" parameterType="hacker.framework.model.entity.Role" resultMap="BaseResultMap">
+
+     SELECT r.id, r.display_name  FROM sun_role r JOIN sun_admin_role ur ON r.id = ur.role_id WHERE ur.admin_id = #{id}
+    </select>
+
+    <!--删除角色-权限关系-->
+    <delete id="deleteRolePermission" parameterType="hacker.framework.model.entity.Role">
+
+    delete from sun_role_permission where role_id = #{id}
+    </delete>
+
+    <!--删除用户-角色关系-->
+    <delete id="deleteAdminRole" parameterType="hacker.framework.model.entity.Role">
+
+    delete from sun_admin_role where role_id = #{id}
+    </delete>
+
+    <!--给角色分配权限-->
+    <insert id="allotPermission" parameterType="hacker.framework.model.Cto.RolePermissions">
+
+        insert into sun_role_permission (permission_id, role_id) values
+        <foreach collection='list' item='item' separator=','>
+            (#{item.pid},#{item.rid})
+        </foreach>
+    </insert>
+
+</mapper>

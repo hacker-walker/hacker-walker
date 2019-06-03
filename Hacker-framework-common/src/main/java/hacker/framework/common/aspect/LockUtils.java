@@ -1,13 +1,11 @@
-package hacker.framework.util;
+package hacker.framework.common.aspect;
 
 import com.google.common.collect.Lists;
-import org.apache.ibatis.annotations.Mapper;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.script.DefaultRedisScript;
 import org.springframework.scripting.support.ResourceScriptSource;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;
 
@@ -18,8 +16,6 @@ import javax.annotation.Resource;
  * @date 2019/6/3 12:37
  */
 @Component
-@Mapper
-@Repository
 public class LockUtils {
 
     @Resource
