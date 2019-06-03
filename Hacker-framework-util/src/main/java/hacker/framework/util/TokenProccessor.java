@@ -8,15 +8,11 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Random;
 
 /**
- * @Description: jinxianianhua
- * @EnglishName LuKe
- * @authod liuqi
- * @date 2019/5/27 15:35
- */
-
-/**
  * 生成Token的工具类
- *
+ * @Description: J X N H
+ * @EnglishName LuKe
+ * @authod LiuQi
+ * @date 2019/6/3 16:37
  */
 public class TokenProccessor {
 

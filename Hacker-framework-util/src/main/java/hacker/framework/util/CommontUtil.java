@@ -7,10 +7,10 @@ import java.util.UUID;
 
 /**
  *
- * @Description: jinxianianhua
+ * @Description: J X N H
  * @EnglishName LuKe
- * @authod liuqi
- * @date 2019/5/27 15:35
+ * @authod LiuQi
+ * @date 2019/6/3 16:58
  * @description 通用工具
  */
 public class CommontUtil {

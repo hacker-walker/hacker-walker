@@ -6,10 +6,10 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
 /**
- * @Description: jinxianianhua
+ * @Description: J X N H
  * @EnglishName LuKe
- * @authod liuqi
- * @date 2019/5/27 15:35
+ * @authod LiuQi
+ * @date 2019/6/3 14:28
  * @description 获取spring 容器
  */
 @Component

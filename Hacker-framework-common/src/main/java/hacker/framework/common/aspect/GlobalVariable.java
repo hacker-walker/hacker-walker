@@ -1,4 +1,4 @@
-package hacker.framework.common.annotation;
+package hacker.framework.common.aspect;
 
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;

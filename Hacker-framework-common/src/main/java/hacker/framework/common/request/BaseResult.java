@@ -1,4 +1,4 @@
-package hacker.framework.common.annotation;
+package hacker.framework.common.request;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -9,7 +9,7 @@ import lombok.Setter;
  * @Description: J X N H
  * @EnglishName LuKe
  * @authod LiuQi
- * @date 2019/6/3 11:36
+ * @date 2019/6/3 14:36
  */
 @Getter
 @Setter

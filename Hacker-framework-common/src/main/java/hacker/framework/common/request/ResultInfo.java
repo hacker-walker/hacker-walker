@@ -1,4 +1,4 @@
-package hacker.framework.common.annotation;
+package hacker.framework.common.request;
 
 import javafx.scene.control.Pagination;
 import lombok.Data;

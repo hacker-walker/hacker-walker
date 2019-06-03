@@ -1,6 +1,7 @@
-package hacker.framework.common.annotation;
+package hacker.framework.common.request;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import hacker.framework.common.enums.BaseExceptionEnum;
 
 import java.io.Serializable;
 import java.util.Collection;

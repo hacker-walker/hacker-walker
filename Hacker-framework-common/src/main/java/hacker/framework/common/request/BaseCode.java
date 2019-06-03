@@ -1,4 +1,4 @@
-package hacker.framework.common.annotation;
+package hacker.framework.common.request;
 
 import lombok.Getter;
 
@@ -7,7 +7,7 @@ import lombok.Getter;
  * @Description: J X N H
  * @EnglishName LuKe
  * @authod LiuQi
- * @date 2019/6/3 11:39
+ * @date 2019/6/3 14:39
  */
 @Getter
 public enum BaseCode {

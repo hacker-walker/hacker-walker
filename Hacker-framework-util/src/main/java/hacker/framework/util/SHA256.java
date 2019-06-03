@@ -7,10 +7,10 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 /**
- * @Description: jinxianianhua
+ * @Description: J X N H
  * @EnglishName LuKe
- * @authod liuqi
- * @date 2019/5/27 15:35
+ * @authod LiuQi
+ * @date 2019/6/3 15:42
  */
 public class SHA256 {
 private static final String CHARSET_NAME = "UTF-8";

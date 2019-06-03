@@ -1,4 +1,4 @@
-package hacker.framework.common.annotation;
+package hacker.framework.common.exception;
 
 /**
  * @description 自定义异常类

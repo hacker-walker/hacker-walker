@@ -1,12 +1,15 @@
-package hacker.framework.common.annotation;
+package hacker.framework.common.exception;
 
+
+import hacker.framework.common.enums.BaseExceptionEnum;
 
 /**
  * 自定义阳光系统异常
+ *
  * @Description: J X N H
  * @EnglishName LuKe
- * @authod liuqi
- * @date 2019/5/22 18:34
+ * @authod LiuQi
+ * @date 2019/6/3 14:58
  */
 public class JxnhException extends RuntimeException {
 

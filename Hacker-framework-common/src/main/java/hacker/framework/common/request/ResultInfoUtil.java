@@ -1,4 +1,7 @@
-package hacker.framework.common.annotation;
+package hacker.framework.common.request;
+
+import hacker.framework.common.annotation.ResponseCode;
+import hacker.framework.common.request.ResultInfo;
 
 /**
  * 返回结果封装结果
