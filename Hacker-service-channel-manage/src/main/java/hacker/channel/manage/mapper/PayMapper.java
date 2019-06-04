@@ -4,6 +4,8 @@ import hacker.framework.model.entity.Pay;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 
 /**
  * 支付
@@ -22,9 +24,9 @@ public interface PayMapper {
     //保存
     int insertSelective(Pay record);
 
-//    List<Pay> query(PayQuery query);
-//
-//    String Pay(String id, String orderMoney);
+   // List<Pay> query(PayQuery query);
+
+    String Pay(String id, String orderMoney);
 
     //修改订单状态
     int updateOrderStatus(Pay record);
