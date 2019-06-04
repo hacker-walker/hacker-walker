@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import hacker.framework.model.Cto.AdminRoles;
 import hacker.framework.model.entity.Admin;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -18,6 +19,7 @@ import java.util.List;
 @Mapper
 public interface AdminMapper extends BaseMapper<Admin> {
 
+    @Select("select * from tb_channel where username = #{name} and status = 1")
     Admin findByName(String username);
 
     int updateUserStatus(Admin user);
