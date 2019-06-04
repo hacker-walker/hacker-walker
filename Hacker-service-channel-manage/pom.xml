@@ -35,6 +35,15 @@
                 <scope>compile</scope>
             </dependency>
             <!--model-->
+
+            <!--util-->
+            <dependency>
+                <groupId>Hacker.walker</groupId>
+                <artifactId>Hacker-framework-util</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <scope>compile</scope>
+            </dependency>
+            <!--util-->
         </dependencies>
 
     <build>
