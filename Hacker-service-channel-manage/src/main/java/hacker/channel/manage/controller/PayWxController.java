@@ -22,14 +22,13 @@ import java.util.Map;
  * @program:J X N H
  * @EnglishName LuKe
  * @authod LiuQi(walker)
- * @date 2019/6/4 17:17
- * @Description: 快捷支付
- * @Version 1.0
+ * @date 2019/5/15 10:47
+ * 微信支付
  **/
 @RestController
-@RequestMapping("/admin/quick")
+@RequestMapping("/admin/wx")
 @CrossOrigin(methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE}, origins = "*")
-public class PayQuickController {
+public class PayWxController {
 
     private static final Logger log= LoggerFactory.getLogger(PayAliController.class);
 
@@ -41,25 +40,22 @@ public class PayQuickController {
     private String notifyUrl;// 用于接收回调通知的地
     @Value("${noncestr}")
     private String noncestr;//随机参数
-    @Value("${returnUrl}")
-    private String returnUrl;//支付完成跳转页面
-    @Value("${subMerchantName}")
-    private String subMerchantName;//二级商户名称
 
     @Autowired
     private PayMapper payMapper;
 
     /***
      *
-     * @param pay 订单信息： 用户id，支付金额，账号id
+     * @param paylogDo 订单信息： 用户id，支付金额，渠道id
+     * @param //address 加密经纬度
      * @return
      */
-//    @RequestMapping(value = "/payLog",method = RequestMethod.POST,produces = "application/json")
+    /*@RequestMapping(value = "/payLog",method = RequestMethod.POST,produces = "application/json")*/
     @PostMapping(value = "/payLog",consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    @ApiOperation(value = "提交银联快捷支付", notes = "true:提交成功,false:提交失败")
-    public ResultBean<String> Pay(@RequestBody Pay pay){
-        //第三方接口 -------》换成自己的调用的第三方即可
-        String wxurl="https://alipay.3c-buy.com/api/createQuickOrder";
+    @ApiOperation(value = "提交微信支付", notes = "true:提交成功,false:提交失败")
+    public ResultBean<String> Pay(@RequestBody Pay paylogDo){
+        //第三方接口-----换成自己的调用的第三方即可
+        String wxurl="https://alipay.3c-buy.com/api/createWxOrder";
 
         Map<String, String> paramMap = new HashMap<String, String>();
 
@@ -70,20 +66,21 @@ public class PayQuickController {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
         String orderTime = sdf.format(new Date());
 
+        //商户
         paramMap.put("merchantOutOrderNo",merchantOutOrderNo);
         paramMap.put("merid",merid);
         paramMap.put("noncestr",noncestr);
         paramMap.put("notifyUrl", notifyUrl);
-        paramMap.put("orderMoney",pay.getPayAmount().toString());
+        paramMap.put("orderMoney",paylogDo.getPayAmount().toString());
         paramMap.put("orderTime",orderTime);
 
         //添加订单信息
         Pay insertPayLogDO=new Pay();
-        insertPayLogDO.setUserId(pay.getUserId());
-        insertPayLogDO.setAdminId(pay.getAdminId());//账户id
-        insertPayLogDO.setPayAmount(pay.getPayAmount()); //金额
+        insertPayLogDO.setUserId(paylogDo.getUserId());
+        insertPayLogDO.setAdminId(paylogDo.getAdminId());//账户id
+        insertPayLogDO.setPayAmount(paylogDo.getPayAmount()); //金额
         insertPayLogDO.setPayStatus(3);//支付状态：1-成功；2-失败；3-等待支付
-        insertPayLogDO.setPayType(3);//支付方式：1-支付宝；2-微信；3-银联
+        insertPayLogDO.setPayType(2);//支付方式：1-支付宝；2-微信；3-银联
         insertPayLogDO.setGmtCreate(new Date());
         insertPayLogDO.setMerchantOutOrderNo(merchantOutOrderNo); //编号
 
@@ -92,19 +89,20 @@ public class PayQuickController {
         String StringA= TestUtil.formatUrlMap(paramMap,false, false);//待签名串
         String sign=TestUtil.getMD5(StringA+"&key="+key);//签名
 
+
         //对参数按照key=value的格式,参照参数名ASCII码排序,并对value做utf-8的encode编码后得到字符串 param
         String param = TestUtil.formatUrlMap(paramMap, true, false);
 
-        //#二级商户名称 银联页面显示的商户名称，不填则默认，请保证该名称已在一麻袋后台的二级商户名称中添加，并通过白名单审核，否则会报“二级商户名称不合法”
-        String url = wxurl + "?" + param + "&sign=" + sign + "&id=" + pay.getUserId()+"&returnUrl="+returnUrl;//+"&subMerchantName="+subMerchantName;
+        String url = wxurl + "?" + param + "&sign=" + sign + "&id=" + paylogDo.getUserId();
 
         log.info("url-[{}]",url);
 
+        //返回信息
         ResultBean<String> resultBean = new ResultBean<>();
         resultBean.setData(url);
         resultBean.setCode(200);
         resultBean.setSuccess(true);
-        resultBean.setMsg("银联快捷支付");
+        resultBean.setMsg("微信支付");
         return resultBean;
     }
 }

@@ -11,11 +11,12 @@ import org.springframework.web.bind.annotation.*;
 
 /**
  * @program:J X N H
- * @authod LiuQi
+ * @EnglishName LuKe
+ * @authod LiuQi(walker)
  * @date 2019/6/4 16:47
  * 支付宝支付
  */
-
+@RestController
 @RequestMapping("/admin/pay")
 @CrossOrigin(methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE}, origins = "*")
 public class PayAliController {
