@@ -24,7 +24,6 @@ public interface PayMapper {
     //保存
     int insertSelective(Pay record);
 
-   // List<Pay> query(PayQuery query);
 
     String Pay(String id, String orderMoney);
 
