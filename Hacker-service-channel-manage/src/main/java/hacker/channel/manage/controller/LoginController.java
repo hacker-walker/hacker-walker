@@ -53,7 +53,7 @@ public class LoginController {
 
         //接收前端传过来的信息
         System.out.println("登陆的用户名为：" +username);
-        System.out.println("登陆的用户名为：" +password);
+        System.out.println("登陆的密码为：" +password);
 
         //密码加盐sha256加密-----》看个人习惯
         password = SHA256.SHA256Encode(password + slat);

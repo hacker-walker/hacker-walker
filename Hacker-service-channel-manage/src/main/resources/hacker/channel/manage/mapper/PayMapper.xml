@@ -77,7 +77,7 @@
     <!--跟住id查询支付状态-->
     <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
         select
-        <include refid="Base_Column_List" />
+        *
         from tb_pay
         where tradeNo = #{tradeNo,jdbcType=BIGINT}
     </select>
