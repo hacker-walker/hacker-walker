@@ -20,7 +20,7 @@ import java.util.Map;
  * @authod LiuQi
  * @date 2019/6/3 16:44
  */
-//@Configuration
+@Configuration
 public class ShiroConfig {
 
     @Autowired

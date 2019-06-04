@@ -19,7 +19,6 @@ import java.util.List;
 @Mapper
 public interface AdminMapper extends BaseMapper<Admin> {
 
-    @Select("select * from tb_admin where username = #{name} and status = 1")
     Admin findByName(String username);
 
     int updateUserStatus(Admin user);

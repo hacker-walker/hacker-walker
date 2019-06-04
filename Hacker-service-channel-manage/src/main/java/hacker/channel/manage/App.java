@@ -23,8 +23,8 @@ import javax.sql.DataSource;
 // 扫描实体类
 @EntityScan("hacker.framework.model")
 //扫描接口
-@MapperScan("hacker.channel.manage.mapper")
-//mapper
+@MapperScan("hacker.channel.manage.dao")
+//dao
 @RequestMapping(value = "/")
 public class App implements ApplicationContextAware {
 
