@@ -19,7 +19,7 @@ import java.util.List;
  */
 
 @Data
-@TableName("tb_channel")
+@TableName("tb_admin")
 public class Admin implements Serializable {
 
     @TableId(type = IdType.AUTO)

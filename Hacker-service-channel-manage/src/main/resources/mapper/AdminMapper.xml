@@ -19,13 +19,13 @@
     <!--查询用户名-->
     <select id="findByName" parameterType="hacker.framework.model.entity.Admin" resultMap="BaseResultMap">
 
-     SELECT * FROM sun_admin WHERE username =#{username} AND STATUS = 1
+     SELECT * FROM tb_admin WHERE username =#{username} AND STATUS = 1
     </select>
 
     <!--通过id修改用户的状态-->
     <update id="updateUserStatus" parameterType="hacker.framework.model.entity.Admin">
 
-      UPDATE sun_admin SET last_login_ip = #{last_login_ip},
+      UPDATE tb_admin SET last_login_ip = #{last_login_ip},
               last_login_token = #{last_login_token},
               login_at = #{login_at} WHERE id = #{id}
         </update>
@@ -33,13 +33,13 @@
     <!--通过id删除当前管理员-->
     <delete id="deleteAdminRole" parameterType="hacker.framework.model.entity.Admin">
 
-        delete from sun_admin_role where admin_id = #{id}
+        delete from tb_admin_role where admin_id = #{id}
     </delete>
 
     <!--批量插入,分配用户角色-->
     <insert id="setRoles" parameterType="hacker.framework.model.Cto.AdminRoles">
 
-        INSERT INTO sun_admin_role (admin_id, role_id) VALUES
+        INSERT INTO tb_admin_role (admin_id, role_id) VALUES
         <foreach collection='list' item='item' separator=','>
             (#{item.uid},#{item.role})
         </foreach>
