@@ -1,7 +1,7 @@
                 ----堇夏年华----
                 
                 
-${AnsiColor.YELLOW}Hello,Welcome to boot...${AnsiColor.RED}Sprin${AnsiColor.BRIGHT_YELLOW}gBoot的${AnsiColor.BRIGHT_GREEN}版本号:${AnsiColor.RED}${AnsiColor.MAGENTA} ${spring-boot.formatted-version} 项目制作人:LuKe ${AnsiColor.BRIGHT_YELLOW}
+       Hello,Welcome to boot...SpringBoot的版本号:v2.0.7.RELEASE 项目制作人:LuKe(walker)
 
 
        2019年，祝每一个努力的人都有所收获
