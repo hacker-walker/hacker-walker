@@ -34,6 +34,7 @@ public class ShiroConfig {
         Map<String,String> filterChainDefinitionMap = new LinkedHashMap<String,String>();
         //登陆url，未登陆也会重定向到此
         shiroFilterFactoryBean.setLoginUrl("/toLogin");
+        //api/login/dr.html
         //配置退出，Shiro已经实现
         filterChainDefinitionMap.put("/logout", "logout");
         //过滤链定义，从上向下顺序执行，一般将/**放在最为下边
