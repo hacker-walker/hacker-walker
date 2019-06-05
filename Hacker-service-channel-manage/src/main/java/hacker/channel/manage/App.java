@@ -12,6 +12,7 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ComponentScans;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.sql.DataSource;
@@ -19,11 +20,12 @@ import javax.sql.DataSource;
 
 @SpringBootApplication
 // 扫描common、util下的所有类
-@ComponentScans(@ComponentScan("hacker.framework.common"))
+@EnableScheduling
+@ComponentScans(@ComponentScan("hacker.framework"))
 // 扫描实体类
 @EntityScan("hacker.framework.model")
 //扫描接口
-@MapperScan("hacker.channel.manage.dao")
+@MapperScan("hacker.channel.manage.mapper")
 //dao
 @RequestMapping(value = "/")
 public class App implements ApplicationContextAware {

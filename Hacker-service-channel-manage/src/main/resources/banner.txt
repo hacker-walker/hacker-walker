@@ -1,4 +1,4 @@
-${AnsiColor.YELLOW}Hello,Welcome to boot...${AnsiColor.RED}Sprin${AnsiColor.BRIGHT_YELLOW}gBoot的${AnsiColor.BRIGHT_GREEN}版本号:${AnsiColor.RED}${AnsiColor.MAGENTA} ${spring-boot.formatted-version} 项目制作人:LuKe ${AnsiColor.BRIGHT_YELLOW}
+${AnsiColor.YELLOW}Hello,Welcome to boot...${AnsiColor.RED}Sprin${AnsiColor.BRIGHT_YELLOW}gBoot的${AnsiColor.BRIGHT_GREEN}版本号:${AnsiColor.RED}${AnsiColor.MAGENTA} ${spring-boot.formatted-version} 项目制作人:LuKe（walker） 博客网站:https://www.wuxf.cn  ${AnsiColor.BRIGHT_YELLOW}
 
 
                                                        __    __    ______   .______    _______
