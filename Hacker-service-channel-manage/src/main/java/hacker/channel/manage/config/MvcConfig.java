@@ -23,7 +23,7 @@ public class MvcConfig implements WebMvcConfigurer {
      */
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/toLogin").setViewName("login");
+        registry.addViewController("/dr.html").setViewName("dr.html");
     }
 
     /**
@@ -32,7 +32,12 @@ public class MvcConfig implements WebMvcConfigurer {
      */
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new AppInterceptor()).addPathPatterns("/**").excludePathPatterns("/login").excludePathPatterns("/toLogin");
+        registry.addInterceptor(new AppInterceptor())
+                .addPathPatterns("/**")
+                .excludePathPatterns("/login")
+                .excludePathPatterns("/error")
+                .excludePathPatterns("/dr.html")
+                .excludePathPatterns("/static/**");
     }
 
 }

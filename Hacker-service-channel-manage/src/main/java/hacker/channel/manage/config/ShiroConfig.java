@@ -33,7 +33,7 @@ public class ShiroConfig {
         //拦截器.
         Map<String,String> filterChainDefinitionMap = new LinkedHashMap<String,String>();
         //登陆url，未登陆也会重定向到此
-        shiroFilterFactoryBean.setLoginUrl("/toLogin");
+        shiroFilterFactoryBean.setLoginUrl("/dr.html");
         //api/login/dr.html
         //配置退出，Shiro已经实现
         filterChainDefinitionMap.put("/logout", "logout");
