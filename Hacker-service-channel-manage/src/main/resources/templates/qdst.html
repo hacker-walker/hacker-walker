@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>主页</title>
+		<link rel="stylesheet" type="text/css" href="css/htshouye.css"/>
+		<link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.15/css/jquery.dataTables.css">
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript" charset="utf8" src="http://cdn.datatables.net/1.10.15/js/jquery.dataTables.js"></script>
+		<style type="text/css">
+			.minMenu1{
+				display: block;
+			}
+			.content{
+				overflow: hidden;
+				min-height: 100%;
+				height:auto;
+				position: relative;
+			}
+			.contentA{
+				width: 280px;
+				margin-top: 28px;
+				margin-left: 30px;
+				display: inline-block;
+			}
+			.contentA>a{
+				color:rgb(198,194,194);
+				font-size: 15px;
+			}
+			.contentA>span{
+				color:rgb(198,194,194);
+			}
+			label{
+				margin-right: 50px;
+				width: 235px;
+				height: 35px;
+				float: right;
+				margin-top: -25px;
+				margin-bottom: 10px;
+				}
+			label>input{
+				width: 158px;
+				height: 26px;
+				border: 1px solid black;
+				text-indent: 10px;
+			}
+			label>input::-webkit-input-placeholder {
+				text-indent: 10px;
+			}
+			#example,
+			#example td {
+				border: 1px solid rgb(180, 180, 180);
+				text-align: center;
+				height: 25px;
+				line-height: 25px;
+				font-size: 13px;
+			}
+			#example {
+				width: 94% !important;
+				margin-left: 2% !important;
+				margin-top: 30px !important;
+			}
+			#example td{
+				padding: 9px 5px;
+			}
+			#example tr:nth-child(even) {
+				background: rgb(220, 220, 220);
+			}
+			#example button{
+				width:24%;
+				height: 30px;
+				line-height: 29px;
+				border-radius: 5px;
+				cursor: pointer;
+				text-align: center;
+				margin-right: 10px;
+				margin-left: 10px;
+				font-size: 12px;
+				background-color:rgb(24, 166, 137);
+				border-color: transparent;
+				color: white;
+			}
+			.rBtn{
+				background-color:rgb(236, 71, 88) !important;
+			}
+			#example_info{
+				margin-left: 2% !important;
+				margin-top: 15px;
+			}
+			.dataTables_paginate{
+				margin-top: 10px;
+				margin-right: 3%;
+			}
+			.box-min{
+				width: 100%;
+				height: 98%;
+				background-color:transparent;
+				position:absolute;
+				top: 0;
+				left: 0;
+				z-index: 887;
+				display: none;
+			}
+			/* 修改信息 */
+			.amend1{
+				width:45%;
+				height: 300px;
+				background-color:rgb(220,220,220);
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				margin:auto;
+				z-index: 888;
+				text-align: center;
+				padding-top: 65px;
+				border-radius: 10px;
+			}
+			.amend1>li{
+				height: 40px;
+				line-height: 40px;
+				margin-bottom: 15px;
+			}
+			.amend1>li>input{
+				width: 300px;
+				margin-left: 20px;
+				height: 35px;
+				line-height: 35px;
+			}
+			.amend1>button{
+				width: 72px;
+				height: 36px;
+				line-height: 35px;
+				border-radius: 5px;
+				cursor: pointer;
+				text-align: center;
+				margin-left: 65px;
+				margin-top: 35px;
+			}
+			.addBtn{
+				background-color:#009688;
+				border-color: transparent;
+				color: white;
+				margin-left: -15px !important;
+				
+			}
+			.removeBtn{
+				background-color: rgb(236, 71, 88);
+				border-color: transparent;
+				color: white;
+				margin-left: 15px;
+			}
+			.input1{
+				margin-left: 32px !important;
+			}
+			.A2none{
+				display: none;
+			}
+			.success1{
+				width: 180px;
+				height: 50px;
+				line-height: 50px;
+				background-color:#009688;
+				color: white;
+				text-align: center;
+				border-radius: 8px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				margin: auto;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 头部   -->
+		<div class="boxMax">
+			<div class="title">
+				<a href="qdst.html">堇夏年华</a>
+				<div class="titleRight">
+					<img src="img/avatar3_small.jpg" />
+					<span class="arrowDown yhm">用户名</span>
+					<div class="titleNone">
+						<ul>
+							<li><a href="dr.html">退出登录</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- 左侧导航栏  -->
+			<ul class="menu">
+				<li>
+					<img src="img/qdsrc.png" alt="" />
+					<span class="menuSpan menuSpan2">渠道管理</span>
+					<ul class="minMenu minMenu1">
+						<li><a href="qdst.html">主页</a></li>
+						<li><a href="addqd.html">权限管理</a></li>
+						<li><a href="qdhtgl.html">后台管理</a></li>
+					</ul>
+				</li>
+				<li>
+					<img src="img/ygsrc.png" alt="" />
+					<span class="menuSpan">权限管理</span>
+					<ul class="minMenu ">
+						<li><a href="yglb.html">用户管理</a></li>
+						<li><a href="ygjylb.html">角色管理</a></li>
+					</ul>
+				</li>
+				<li>
+					<img src="img/hysrc.png" alt="" />
+					<span class="menuSpan">后台管理</span>
+					<ul class="minMenu">
+						<li><a href="hylb.html">用户列表</a></li>
+						<li><a href="hylb.html">员工列表</a></li>
+
+					</ul>
+				</li>
+			</ul>
+			<!-- 主体内容 -->
+			<div class="content">
+				<div class="contentA">
+					<a href="htsy.html">首页</a>&nbsp;
+					 <span> / </span>&nbsp; 
+					<a href="htsy.html">渠道管理</a>&nbsp;
+					 <span> / </span>&nbsp; 
+					<a href="qdst.html">渠道视图</a>
+				</div>
+				<table cellspacing="0" class="stTable" id="example">
+					<thead>
+					<tr>
+						<td width="7.5%" >渠道ID</td>
+						<td width="11%" >渠道名称</td>
+						<td width="7.5%" >合作价格</td>
+						<td width="11%" >渠道金额汇总</td>
+						<td width="11%" >渠道总注册量</td>
+						<td width="9%" class="sj1"></td>
+						<td width="9%" class="sj2"></td>
+						<td width="9%" class="sj3"></td>
+						<td width="25%">操作</td>
+					</tr>
+					</thead>
+				</table>
+			</div>
+			<div class="box-min">
+			<ul class="amend1">
+					<li><span>渠道ID</span><input type="text" class="input1" disabled="disabled"></li>
+					<li><span>渠道名称</span><input type="text" class="input2"></li>
+					<li><span>合作价格</span><input type="text" class="input3"></li>
+					<button class="addBtn">确认修改</button>
+					<button class="removeBtn">取消</button>
+				</ul>
+			</div>
+			<div class="success1">复制成功</div>
+		</div>
+		
+		<script type="text/javascript">
+            var x = document.cookie;
+            var yhm = x.split(";")[0].split("=")[1];
+            console.log(x)
+            console.log(yhm);
+            $('.yhm').html(yhm);
+			// 日期
+			function getDay(num, str) {
+    			var today = new Date();
+    			var nowTime = today.getTime();
+    			var ms = 24*3600*1000*num;
+    			today.setTime(parseInt(nowTime + ms));
+    			var oYear = today.getFullYear();
+   			 	var oMoth = (today.getMonth() + 1).toString();
+    			if (oMoth.length <= 1) oMoth = '0' + oMoth;
+    			var oDay = today.getDate().toString();
+    			if (oDay.length <= 1) oDay = '0' + oDay;
+    			return oYear + str + oMoth + str + oDay;
+					}
+				var sj1 = getDay(0,'-');
+				var sj2 = getDay(-1, '-');
+				var sj3 = getDay(-2, '-');
+				$('.sj1').html(sj1);
+				$('.sj2').html(sj2);
+				$('.sj3').html(sj3);
+				
+			$('.titleRight').mouseenter(function() {
+				$('.titleNone').css({
+					display: "block"
+				})
+			})
+			$('.titleRight').mouseleave(function() {
+				$('.titleNone').css({
+					display: "none"
+				})
+			})
+			$('.menuSpan').click(function(){
+				var notA = $(this).next();
+				$('.menuSpan').not(this).removeClass('menuSpan2');
+				$('.minMenu').not(notA).hide(500);
+				$(this).toggleClass('menuSpan2');
+				$(this).next().toggle(500);
+			})
+
+			
+	 	$('#example').DataTable({
+			bAutoWidth:false,//自动宽度
+			bDeferRender:true,//延迟渲染
+			lengthChange: false,//控制是否可以改变每页数据量
+			retrieve:true,
+			"oLanguage": {//插件的汉化
+                    "sLengthMenu": "每页显示 _MENU_ 条记录",
+                    "sZeroRecords": "抱歉， 没有找到",
+                    "sInfo": "从 _START_ 到 _END_ /共 _TOTAL_ 条数据",
+                    "sInfoEmpty": "没有数据",
+                    "sInfoFiltered": "(从 _MAX_ 条数据中检索)",
+                    "oPaginate": {
+                        "sFirst": "首页",
+                        "sPrevious": "前一页",
+                        "sNext": "后一页",
+                        "sLast": "尾页"
+                    },
+                     "sZeroRecords": "没有检索到数据",
+                    "sProcessing": "<img src='' />",
+                    "sSearch": "搜索"
+               },
+		ajax: {
+			url: '/api/channel/findByStatus/1',
+			type: 'POST',
+			data:JSON.stringify({status:1,registerDate:sj1}),
+			dataSrc: ''
+		},
+		columns: [{
+				data: 'id'
+			}, {
+				data: 'name'
+			}, {
+				data: 'price'
+			}, {
+				data: 'channel_money'
+			}, {
+				data: 'register_num'
+			}, {
+				data: 'user_id'
+			}
+		],
+		 columnDefs:[{
+                targets: 8,
+                render: function (data, type, row, meta) {
+                    return '<button class="xgBtn" onclick = "xgBtn1(this)">修改信息</button><button onclick = "fzBtn(this)">复制链接</button><button class="rBtn" onclick = "jyBtn(this)">禁用渠道</button>';
+                }
+            },
+                { "orderable": false, "targets": 8 },
+            ],
+	});
+	// 修改信息
+		function xgBtn1(this1){
+			$('.box-min').slideToggle(400);
+			var Row1 = $(this1).parents('tr').eq(0);
+			var sz1 = $("#example").dataTable().fnGetData(Row1);
+			$('.input1').val(sz1.id);
+			$('.input2').val(sz1.name);
+			$('.input3').val(sz1.price);	
+		}
+		$('.removeBtn').click(function(){
+			$('.box-min').slideUp(400);
+		})
+		$('.addBtn').click(function(){
+			var qdID = $('.input1').val();
+			var qdName = $('.input2').val();
+			var qdMoney = $('.input3').val();
+			$.ajax({
+				type:"post",
+				url:"/api/channel/save",
+				data:JSON.stringify({id:qdID,name:qdName,price:qdMoney}),
+				asasync:true,
+				cache:false,
+				contentType: 'application/json',
+				success:function(e){
+					alert('修改成功');
+					window.location.href="qdst.html";
+				}
+			})
+		})
+		// 复制链接
+		function fzBtn(this2){
+			var Row2 = $(this2).parents('tr').eq(0);
+			var sz2 = $("#example").dataTable().fnGetData(Row2);
+			var A2 = document.createElement('input');
+			// A2.value =sz2.productAddress+'?id='+sz2.id;
+            A2.value ="http://www.wa18q.cn:18001/mhyj/zhuce.html?id="+sz2.id;
+			document.body.appendChild(A2);
+			console.log(A2);
+			A2.select(); // 选择对象
+			document.execCommand("Copy"); // 执行浏览器复制命令
+			A2.className = 'A2none';
+			$('.success1').fadeIn(1000);
+			$('.success1').fadeOut(1500);
+		}
+		// 禁用渠道
+		function jyBtn(this3){
+			var Row3 = $(this3).parents('tr').eq(0);
+			var sz3 = $("#example").dataTable().fnGetData(Row3);
+			$.ajax({
+				type:"post",
+				url:"/api/channel/save",
+				data:JSON.stringify({id:sz3.id,name:sz3.name,status:0}),
+				asasync:true,
+				cache:false,
+				contentType: 'application/json',
+				success:function(e){
+					alert('禁用成功');
+					window.location.href="qdst.html";
+				}
+			})
+		}
+		</script>
+	</body>
+</html>

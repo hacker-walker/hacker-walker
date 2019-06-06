@@ -22,6 +22,20 @@
     </modules>
     <!--子项目-->
 
+    <!-- 开发不易，希望您可以保留一下版权声明。笔芯~ -->
+    <description>
+        walker开源作品 个人博客:https://wuxf.cn 微信公众号:堇夏年华
+    </description>
+
+    <developers>
+        <developer>
+            <id>LuKe</id>
+            <name>walker</name>
+            <email>a18627830855@163.com</email>
+            <url>https://wuxf.cn</url>
+        </developer>
+    </developers>
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -162,7 +176,13 @@
             <artifactId>thymeleaf-extras-shiro</artifactId>
             <version>2.0.0</version>
         </dependency>
-        <!-- thymeleaf对shiro的支持-->
+
+        <!-- thymeleaf 模板引擎-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
     </dependencies>
 
     <!--build-->

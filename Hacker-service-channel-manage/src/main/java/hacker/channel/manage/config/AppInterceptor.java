@@ -25,15 +25,11 @@ public class AppInterceptor implements HandlerInterceptor {
                              Object handler) throws Exception {
         String url = request.getRequestURL().toString();
         log.info("=== request url: "+url);
-//        String username = "123";
-//        String password = "123";
-//        String slat = "Jhuiabn9_DhiebFIJ==jel%$dafe4fs@deaerf_";
-//        password = SHA256.SHA256Encode(password + slat);
+
         Subject subject = SecurityUtils.getSubject();
-//        AuthenticationToken authenticationToken = new UsernamePasswordToken(username, password);
         Object principal = subject.getPrincipal();
         if (null == principal){
-            response.sendRedirect("/dr.html");
+            response.sendRedirect("/templates/dr");
             log.info("=拦截=重定向=");
             return false;
         }

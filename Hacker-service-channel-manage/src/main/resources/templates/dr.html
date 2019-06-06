@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>登陆</title>
     <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+
     <style type="text/css">
         * {
             padding: 0;
@@ -20,8 +21,10 @@
         .box {
             width: 100%;
             height: 100%;
-            background-color: rgb(54, 65, 80);
+            /*//background-color: rgb(54, 65, 80);*/
             overflow: hidden;
+            background-image: url("https://www.wuxf.cn/upload/2019/5/你的名字20190606152935411.jpg");
+            background-size: 100% 100%;
         }
 
         .center {
@@ -32,8 +35,8 @@
         }
 
         .center > p {
-            color: white;
-            font-size: 24px;
+            color: #fffab7;
+            font-size: 60px;
             text-align: center;
             margin-bottom: 50px;
         }
@@ -41,13 +44,13 @@
         .centerDiv {
             width: 100%;
             height: 300px;
-            background-color: rgb(236, 238, 241);
+            background-color: rgba(253, 251, 255, 0);
             overflow: hidden;
         }
 
         .centerDiv > p {
-            font-size: 28px;
-            color: rgb(77, 179, 165);
+            font-size: 20px;
+            color: rgb(19, 47, 255);
             text-align: center;
             margin-top: 30px;
             margin-bottom: 20px;
@@ -59,10 +62,12 @@
             line-height: 40px;
             margin-bottom: 15px;
             margin-left: 7.5%;
-            background-color: rgb(221, 227, 236);
-            border: 1px solid rgb(221, 227, 236);
+            background-color: rgba(253, 251, 255,0);
+            border: 1px solid rgb(12, 12, 11);
             text-indent: 10px;
         }
+
+
 
         .centerDiv > input::-webkit-input-placeholder {
             text-indent: 10px;
@@ -74,8 +79,8 @@
             line-height: 40px;
             margin-left: 7.5%;
             color: #fff;
-            background-color: #45B6AF;
-            border: #45B6AF;
+            background-color: #794bb0;
+            border: #32b64f;
             font-size: 17px;
             margin-top: 15px;
             cursor: pointer;
@@ -93,7 +98,7 @@
     <div class="center">
         <p>堇夏年华</p>
         <div class="centerDiv">
-            <p>登录</p>
+            <p>你若不离不弃，我必生死相依</p><br>
             <input type="text" placeholder="请输入用户名" class="username"/>
             <input type="password" placeholder="请输入密码" class="passWord"/>
             <button class="btn1">登录</button>
@@ -118,8 +123,8 @@
                 console.log(data);
                 if (data.data == 1) {
                     document.cookie = "yhm=" + data.msg;
-                    // window.location.href="qdst.html";
-                    alert('登录成功');
+                     window.location.href="https://wuxf.cn";
+                    // alert('登录成功');
                 } else {
                     alert('账号密码错误');
                 }
@@ -130,9 +135,6 @@
         })
     })
 
-
 </script>
-
 </body>
-
 </html>
