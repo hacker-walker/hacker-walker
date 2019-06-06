@@ -13,7 +13,7 @@
 
     <!--输出到文件-->
     <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${log.path}/jn.log</file>
+        <!--<file>${log.path}/jn.log</file>-->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <fileNamePattern>logback.%d{yyyy-MM-dd}.log</fileNamePattern>
         </rollingPolicy>
@@ -25,8 +25,8 @@
     <!--指定最基础的日志输出级别-->
     <root level="info">
         <appender-ref ref="console" />
-        <!--生成文件-->
-        <appender-ref ref="file" />
+        <!--&lt;!&ndash;生成文件&ndash;&gt;-->
+        <!--<appender-ref ref="file" />-->
     </root>
 
     <!-- logback为java中的包 -->
