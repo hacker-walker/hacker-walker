@@ -7,9 +7,9 @@
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
 
         <!--去除所有的日志信息-->
-       <filter class="ch.qos.logback.classic.filter.ThresholdFilter" >
-            <level>WARN</level>
-        </filter>
+       <!--<filter class="ch.qos.logback.classic.filter.ThresholdFilter" >-->
+            <!--<level>WARN</level>-->
+        <!--</filter>-->
 
         <encoder>
             <pattern>%d{HH:mm:ss.SSS} %contextName [%thread] %-5level %logger{36} - %msg%n</pattern>
