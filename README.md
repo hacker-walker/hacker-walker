@@ -47,3 +47,16 @@ Hello,Welcome to boot...SpringBoot的版本号:v2.0.7.RELEASE 项目制作人:Lu
     a.直接运行hacker.channel.manage目录下的App
     b.浏览器访问：http://127.0.0.1:8888
 ```
+
+
+### 感谢
+- Hacker-walker的诞生离不开下面这些项目（取之开源，用之开源）：
+- Spring Boot：核心框架
+- Apache Shiro：权限框架
+- Thymeleaf：模板引擎
+- MyBatis-plus：用于Java的MyBatis SQL Mapper框架
+- alibaba/druid：数据库连接池
+- alibaba/fastjson：用于Java的快速JSON解析器/生成器
+- Lombok：让代码更简洁
+- swagger：Swagger（丝袜哥）是世界上最流行的 API 表达工具。
+- Html5：前端页面
