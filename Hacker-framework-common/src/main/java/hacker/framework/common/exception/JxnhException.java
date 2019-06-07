@@ -4,7 +4,7 @@ package hacker.framework.common.exception;
 import hacker.framework.common.enums.BaseExceptionEnum;
 
 /**
- * 自定义阳光系统异常
+ * 自定义堇夏年华异常
  *
  * @Description: J X N H
  * @EnglishName LuKe

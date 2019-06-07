@@ -20,6 +20,7 @@ import java.util.Locale;
 import java.util.Properties;
 
 /**
+ * 逆向工程
  * SqlTimeInterceptor
  */
 @Intercepts({@Signature(type = Executor.class, method = "update", args = {MappedStatement.class, Object.class}),
