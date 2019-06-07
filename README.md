@@ -30,6 +30,16 @@ walker开源作品   个人博客:https://wuxf.cn   微信公众号:堇夏年华
 后端API管理：localhost:8888/swagger-ui.html
 ```
 
+### 模块划分
+| 模块   | 释义   |
+| -- | -- |
+| Hacker-service-channel-manage  |  后台管理模块,Mapper,Service等 |
+| Hacker-framework-common  | 框架的各种牛逼配置   |
+| Hacker-framework-model  |  数据库核心实体类  |
+| Hacker-govern-gateway(center)  |  网关  |
+
+
+
 ### 使用说明 
 ```
 1.使用命令拉取代码：
