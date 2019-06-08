@@ -23,7 +23,7 @@ import javax.servlet.http.HttpSession;
  * admin用户登陆界面
  * @Description: J X N H
  * @EnglishName LuKe
- * @authod LiuQi
+ * @authod LiuQi(walker)
  * @date 2019/6/3 14:14
  */
 @Slf4j
