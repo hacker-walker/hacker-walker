@@ -11,7 +11,7 @@ walker开源作品   个人博客:https://wuxf.cn
 
 微信公众号:堇夏年华
 
-![file](https://www.wuxf.cn/upload/2019/5/81719e7ff35f40ad17244495ebd06372019061015383615.png)
+![file](https://images.gitee.com/uploads/images/2019/0610/161454_710bf233_2127888.png)
 
 
 ### 简介
@@ -92,5 +92,6 @@ walker开源作品   个人博客:https://wuxf.cn
 作者:低调小熊猫 博客：https://aodeng.cc（我们不改变世界，我们跟着世界改变）微信公众号：低调小熊猫
 
 ### Last
+    为了防止世界被毁灭，为了爱情和正义，建议大家看看提出问题的智慧。http://doc.zengrong.net/smart-questions/cn.html
 
-In order to prevent the world from being destroyed, in order to love and justice, it is recommended to look at the wisdom of asking questions. http://doc.zengrong.net/smart-questions/cn.html
+    In order to prevent the world from being destroyed, in order to love and justice, it is recommended to look at the wisdom of asking questions. http://doc.zengrong.net/smart-questions/cn.html
