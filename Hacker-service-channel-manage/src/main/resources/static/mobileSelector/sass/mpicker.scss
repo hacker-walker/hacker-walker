@@ -1,0 +1,209 @@
+﻿@charset 'UTF-8';
+$mPicker-header-height: 40px;
+$mPicker-footer-height: 36px;
+$mPicker-item-height: 36px;
+$mPicker-theme-color: #31b6e7;
+.hide {
+  display: none;
+}
+
+.mPicker-hide {
+  visibility: hidden;
+}
+
+.mPicker-pr {
+  position: relative;
+}
+
+.mPicker {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+/*遮罩*/
+
+.mPicker-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  background: #000;
+  opacity: .7;
+}
+
+/*选中的线*/
+
+.mPicker-active-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  margin-left: -35%;
+  border-top: 1px solid $mPicker-theme-color;
+  border-bottom: 1px solid $mPicker-theme-color;
+}
+
+.mPicker-main {
+  background: #f5f5f5;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+  -webkit-backface-visibility: hidden; //隐藏转换的元素的背面
+  -webkit-transform-style: preserve-3d; //使被转换的元素的子元素保留其 3D 转换
+  -webkit-transform: translate3d(0, 0, 0); //开启GPU硬件加速模式，使用GPU代替CPU渲染动画（在安卓系统中有时会有莫名其妙的BUG，建议慎重）
+}
+
+.mPicker-main.mPicker-bottom {
+  bottom: 0;
+}
+
+.mPicker-main.mPicker-modal {
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  width: 264px;
+  top: 50%;
+  bottom: auto;
+  left: 50%;
+  margin-top: -127px;
+  margin-left: -132px;
+}
+
+.mPicker-main.down {
+  transform: translateY(100%);
+  -webkit-transform: translateY(100%);
+}
+
+.mPicker-header {
+  position: relative;
+  height: $mPicker-header-height;
+  line-height: $mPicker-header-height;
+  text-align: center;
+  border-bottom: 1px solid $mPicker-theme-color;
+  color: $mPicker-theme-color;
+  font-size: 1.6rem;
+}
+
+.mPicker-footer {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  height: $mPicker-footer-height;
+  line-height: $mPicker-footer-height;
+  position: relative;
+}
+
+.mPicker-content {
+  overflow: hidden;
+  z-index: 15;
+  position: relative;
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.mPicker-list {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.mPicker-content ul {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 20;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mPicker-content li {
+  padding-left: 3%;
+  padding-right: 3%;
+  height: $mPicker-item-height;
+  line-height: $mPicker-item-height;
+  overflow: hidden;
+  color: #333;
+  font-size: 1.4rem;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+}
+
+.mPicker-content li.active {
+  color: #000;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.mPicker-content.level-2 ul {
+  width: 50%;
+}
+
+/*按钮*/
+
+.mPicker-confirm,
+.mPicker-cancel {
+  color: #333;
+  font-size: 1.4rem;
+  width: 50%;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  &:active,
+  &:hover {
+    background-color: #29799c;
+    color: #fff;
+  }
+}
+
+.mPicker-confirm {
+  border-right: 1px solid #dbdbdb;
+  background: $mPicker-theme-color;
+  color: #fff;
+}
+
+.mPicker-input-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.mPicker-shadow {
+  position: absolute;
+  top: $mPicker-header-height+1;
+  bottom: $mPicker-footer-height+2;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: linear-gradient(#282828 0, rgba(40, 40, 40, 0) 52%, rgba(40, 40, 40, 0) 48%, #282828 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#282828), color-stop(0.52, rgba(40, 40, 40, 0)), color-stop(0.48, rgba(40, 40, 40, 0)), to(#282828));
+  background: -moz-linear-gradient(#282828 0, rgba(40, 40, 40, 0) 52%, rgba(40, 40, 40, 0) 48%, #282828 100%);
+  background: -o-linear-gradient(#282828 0, rgba(40, 40, 40, 0) 52%, rgba(40, 40, 40, 0) 48%, #282828 100%);
+  background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(rgb(245, 245, 245)), color-stop(0.48, rgba(245, 245, 245, 0)), color-stop(0.52, rgba(245, 245, 245, 0)), to(rgb(245, 245, 245)));
+  pointer-events: none;
+}

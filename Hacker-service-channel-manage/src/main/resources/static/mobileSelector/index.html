@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+    <title>Document</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
+    <link rel="stylesheet" href="css/mpicker.css">
+    <style type="text/css">
+        /*自定义样式*/
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #333;
+            background-color: #fff;
+        }
+
+        .slide-wapper {
+            padding: 20px;
+            overflow-y: scroll;
+            /* background: #eee; */
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="slide-wapper">
+    <div class="slide-item">
+        <div class="console"></div>
+        <h4>调试查看选择的数据，请打开控制台看输出信息</h4>
+        <br>
+        <h4>三级城市联动选择</h4>
+        <input type="text" class="select-value form-control" value="广东省-东莞市">
+        <br>
+        <h4>二级城市联动选择</h4>
+        <input type="text" class="select-value1 form-control" value="广东省-东莞市">
+        <br>
+        <h4>二级非联动选择</h4>
+        <div class="select-input2">
+            <input type="text" class="select-value2 form-control" value="收到额外人 饿的方式度过333">
+        </div>
+        <br>
+        <h4>单级选择</h4>
+        <input type="text" class="select-value3 form-control" value="">
+
+        <br><br>
+        <!-- 二级非联动选择 -->
+        <!--  <input type="text" class="select-value4" value="饿的方式度过 收到额外人" readonly="true" mpicker='picker4'> -->
+
+        <pre>
+//模拟数据都在json.js里
+两级联动选择插件调用：
+$('.select-value1').mPicker({
+    //级别
+    level:2,
+    //需要渲染的json，二级联动的需要嵌套子元素，有一定的json格式要求
+    dataJson:dataJson,
+    //true:联动
+    Linkage:true,
+    //显示行数
+    rows:6,
+    //默认值填充
+    idDefault:true,
+    //分割符号
+    splitStr:'-',
+    //头部代码
+    header:'<\div class="mPicker-header">两级联动选择插件<\/div>',
+    confirm:function(){
+        //更新json
+        this.container.data('mPicker').updateData(level3);
+        //console.info($('.select-value').data('value1')+'-'+$('.select-value').data('value2'));
+    },
+    cancel:function(){
+        //console.info($('.select-value').data('value1')+'-'+$('.select-value').data('value2'));
+    }
+})
+//返回的实例对象，
+//包含showPicker,hide,updateData等方法
+// var method= $('.select-value').data('mPicker');
+// console.info(method)
+// method.showPicker();
+// method.hide(function(){
+//     console.info(this)
+// });
+        </pre>
+
+    </div>
+</div>
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script src="js/json.js"></script>
+<script src="js/jsonExchange.js"></script>
+<script src="js/mPicker.min.js"></script>
+<script chartset="UTF-8">
+    $(function () {
+
+        /**
+         * 联动的picker
+         * 三级
+         */
+        $('.select-value').mPicker({
+            level: 3,
+            dataJson: city3,
+            Linkage: true,
+            rows: 6,
+            idDefault: true,
+            splitStr: '-',
+            header: '<div class="mPicker-header">三级联动选择插件</div>',
+            confirm: function (json) {
+                console.info('当前选中json：', json);
+                console.info('【json里有不带value时】');
+                console.info('选中的id序号为：', json.ids);
+                console.info('选中的value为：', json.values);
+                // var id1= $('.select-value').data('id1');
+                // var id2 = $('.select-value').data('id2');
+                // var id3 = $('.select-value').data('id3');
+                // console.info('第一列json：',city3[id1]);
+                // console.info('第二列json：', city3[id1].child[id2]);
+                // console.info('第三列json：', city3[id1].child[id2].child[id3]);
+            },
+            cancel: function (json) {
+                console.info('当前选中json：', json);
+            }
+        })
+        //获取mpicker实例
+        var method = $('.select-value').data('mPicker');
+        console.info('第一个mpicker的实例为：', method);
+        //mpicker方法
+        // method.showPicker();
+        // method.hidePicker(function(){
+        //     console.info(this)
+        // });
+
+        /**
+         * 联动的picker--添加修改后修改数据的效果
+         * 两级
+         */
+        $('.select-value1').mPicker({
+            level: 2,
+            dataJson: dataJson,
+            Linkage: true,
+            rows: 6,
+            idDefault: true,
+            splitStr: '-',
+            header: '<div class="mPicker-header">两级联动选择插件</div>',
+            confirm: function (json) {
+                console.info('当前选中json：', json);
+                var _this = this;
+                console.info('【json里有带value的情况】');
+                //更新json
+                console.info('3s后更新json...');
+                setTimeout(function () {
+                    _this.container.data('mPicker').updateData.call(_this, level3);
+                    var json = getVal();
+                    var valArr = json.value;
+                    console.info('更新成功!!');
+                    console.info('更新后的value为空', valArr[0], valArr[1]);
+                    console.info('更新后的value拼接值为空', json.result);
+                }, 3000);
+
+            },
+            cancel: function (json) {
+            }
+        })
+
+        //获取value
+        function getVal() {
+            var value1 = $('.select-value1').data('value1');
+            var value2 = $('.select-value1').data('value2');
+            var result = '';
+            value1 = value1 || '';
+            value2 = value2 || '';
+            if (value1) {
+                result = value1;
+            }
+            if (value2) {
+                result = result + '-' + value2;
+            }
+            return {
+                value: [value1, value2],
+                result: result
+            };
+        }
+
+        /**
+         * 不联动的picker
+         * 两级
+         */
+        var method2 = $('.select-value2').mPicker({
+            level: 2,
+            dataJson: level3,
+            rows: 5,
+            Linkage: false,
+            header: '<div class="mPicker-header">非联动选择插件</div>',
+            idDefault: true,
+            confirm: function (json) {
+                console.info('当前选中json：', json);
+            }
+        })
+
+        /**
+         * 一级
+         */
+        var method3 = $('.select-value3').mPicker({
+            level: 1,
+            dataJson: dataJson,
+            Linkage: false,
+            rows: 6,
+            idDefault: true,
+            header: '<div class="mPicker-header">单级选择</div>',
+            confirm: function (json) {
+                console.info('当前选中json：', json);
+            },
+            cancel: function (json) {
+                console.info('当前选中json：', json);
+            }
+        })
+    });
+</script>
+
+</body>
+
+</html>
