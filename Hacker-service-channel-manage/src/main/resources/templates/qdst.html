@@ -321,121 +321,123 @@
 
     // dataTables
 
-    $('#example').DataTable({
-        bAutoWidth: false,//自动宽度
-        bDeferRender: true,//延迟渲染
-        lengthChange: false,//控制是否可以改变每页数据量
-        retrieve: true,
-        "oLanguage": {//插件的汉化
-            "sLengthMenu": "每页显示 _MENU_ 条记录",
-            "sZeroRecords": "抱歉， 没有找到",
-            "sInfo": "从 _START_ 到 _END_ /共 _TOTAL_ 条数据",
-            "sInfoEmpty": "没有数据",
-            "sInfoFiltered": "(从 _MAX_ 条数据中检索)",
-            "oPaginate": {
-                "sFirst": "首页",
-                "sPrevious": "前一页",
-                "sNext": "后一页",
-                "sLast": "尾页"
-            },
-            "sZeroRecords": "没有检索到数据",
-            "sProcessing": "<img src='' />",
-            "sSearch": "搜索"
-        },
-        ajax: {
-            url: '/api/channel/findByStatus/1',
-            type: 'POST',
-            data: JSON.stringify({status: 1, registerDate: sj1}),
-            dataSrc: ''
-        },
-        columns: [{
-            data: 'id'
-        }, {
-            data: 'name'
-        }, {
-            data: 'price'
-        }, {
-            data: 'channel_money'
-        }, {
-            data: 'register_num'
-        }, {
-            data: 'user_id'
-        }
-        ],
-        columnDefs: [{
-            targets: 8,
-            render: function (data, type, row, meta) {
-                return '<button class="xgBtn" onclick = "xgBtn1(this)">修改信息</button><button onclick = "fzBtn(this)">复制链接</button><button class="rBtn" onclick = "jyBtn(this)">禁用渠道</button>';
-            }
-        },
-            {"orderable": false, "targets": 8},
-        ],
-    });
 
-    // 修改信息
-    function xgBtn1(this1) {
-        $('.box-min').slideToggle(400);
-        var Row1 = $(this1).parents('tr').eq(0);
-        var sz1 = $("#example").dataTable().fnGetData(Row1);
-        $('.input1').val(sz1.id);
-        $('.input2').val(sz1.name);
-        $('.input3').val(sz1.price);
-    }
 
-    $('.removeBtn').click(function () {
-        $('.box-min').slideUp(400);
-    })
-    $('.addBtn').click(function () {
-        var qdID = $('.input1').val();
-        var qdName = $('.input2').val();
-        var qdMoney = $('.input3').val();
-        $.ajax({
-            type: "post",
-            url: "/api/channel/save",
-            data: JSON.stringify({id: qdID, name: qdName, price: qdMoney}),
-            asasync: true,
-            cache: false,
-            contentType: 'application/json',
-            success: function (e) {
-                alert('修改成功');
-                window.location.href = "qdst.html";
-            }
-        })
-    })
-
-    // 复制链接
-    function fzBtn(this2) {
-        var Row2 = $(this2).parents('tr').eq(0);
-        var sz2 = $("#example").dataTable().fnGetData(Row2);
-        var A2 = document.createElement('input');
-        // A2.value =sz2.productAddress+'?id='+sz2.id;
-        A2.value = "http://www.wa18q.cn:18001/mhyj/zhuce.html?id=" + sz2.id;
-        document.body.appendChild(A2);
-        console.log(A2);
-        A2.select(); // 选择对象
-        document.execCommand("Copy"); // 执行浏览器复制命令
-        A2.className = 'A2none';
-        $('.success1').fadeIn(1000);
-        $('.success1').fadeOut(1500);
-    }
-
-    // 禁用渠道
-    function jyBtn(this3) {
-        var Row3 = $(this3).parents('tr').eq(0);
-        var sz3 = $("#example").dataTable().fnGetData(Row3);
-        $.ajax({
-            type: "post",
-            url: "/api/channel/save",
-            data: JSON.stringify({id: sz3.id, name: sz3.name, status: 0}),
-            asasync: true,
-            cache: false,
-            contentType: 'application/json',
-            success: function (e) {
-                alert('禁用成功');
-                window.location.href = "qdst.html";
-            }
-        })
-    }
+    // $('#example').DataTable({
+    //     bAutoWidth: false,//自动宽度
+    //     bDeferRender: true,//延迟渲染
+    //     lengthChange: false,//控制是否可以改变每页数据量
+    //     retrieve: true,
+    //     "oLanguage": {//插件的汉化
+    //         "sLengthMenu": "每页显示 _MENU_ 条记录",
+    //         "sZeroRecords": "抱歉， 没有找到",
+    //         "sInfo": "从 _START_ 到 _END_ /共 _TOTAL_ 条数据",
+    //         "sInfoEmpty": "没有数据",
+    //         "sInfoFiltered": "(从 _MAX_ 条数据中检索)",
+    //         "oPaginate": {
+    //             "sFirst": "首页",
+    //             "sPrevious": "前一页",
+    //             "sNext": "后一页",
+    //             "sLast": "尾页"
+    //         },
+    //         "sZeroRecords": "没有检索到数据",
+    //         "sProcessing": "<img src='' />",
+    //         "sSearch": "搜索"
+    //     },
+    //     ajax: {
+    //         url: '/api/channel/findByStatus/1',
+    //         type: 'POST',
+    //         data: JSON.stringify({status: 1, registerDate: sj1}),
+    //         dataSrc: ''
+    //     },
+    //     columns: [{
+    //         data: 'id'
+    //     }, {
+    //         data: 'name'
+    //     }, {
+    //         data: 'price'
+    //     }, {
+    //         data: 'channel_money'
+    //     }, {
+    //         data: 'register_num'
+    //     }, {
+    //         data: 'user_id'
+    //     }
+    //     ],
+    //     columnDefs: [{
+    //         targets: 8,
+    //         render: function (data, type, row, meta) {
+    //             return '<button class="xgBtn" onclick = "xgBtn1(this)">修改信息</button><button onclick = "fzBtn(this)">复制链接</button><button class="rBtn" onclick = "jyBtn(this)">禁用渠道</button>';
+    //         }
+    //     },
+    //         {"orderable": false, "targets": 8},
+    //     ],
+    // });
+    //
+    // // 修改信息
+    // function xgBtn1(this1) {
+    //     $('.box-min').slideToggle(400);
+    //     var Row1 = $(this1).parents('tr').eq(0);
+    //     var sz1 = $("#example").dataTable().fnGetData(Row1);
+    //     $('.input1').val(sz1.id);
+    //     $('.input2').val(sz1.name);
+    //     $('.input3').val(sz1.price);
+    // }
+    //
+    // $('.removeBtn').click(function () {
+    //     $('.box-min').slideUp(400);
+    // })
+    // $('.addBtn').click(function () {
+    //     var qdID = $('.input1').val();
+    //     var qdName = $('.input2').val();
+    //     var qdMoney = $('.input3').val();
+    //     $.ajax({
+    //         type: "post",
+    //         url: "/api/channel/save",
+    //         data: JSON.stringify({id: qdID, name: qdName, price: qdMoney}),
+    //         asasync: true,
+    //         cache: false,
+    //         contentType: 'application/json',
+    //         success: function (e) {
+    //             alert('修改成功');
+    //             window.location.href = "qdst.html";
+    //         }
+    //     })
+    // })
+    //
+    // // 复制链接
+    // function fzBtn(this2) {
+    //     var Row2 = $(this2).parents('tr').eq(0);
+    //     var sz2 = $("#example").dataTable().fnGetData(Row2);
+    //     var A2 = document.createElement('input');
+    //     // A2.value =sz2.productAddress+'?id='+sz2.id;
+    //     A2.value = "http://www.wa18q.cn:18001/mhyj/zhuce.html?id=" + sz2.id;
+    //     document.body.appendChild(A2);
+    //     console.log(A2);
+    //     A2.select(); // 选择对象
+    //     document.execCommand("Copy"); // 执行浏览器复制命令
+    //     A2.className = 'A2none';
+    //     $('.success1').fadeIn(1000);
+    //     $('.success1').fadeOut(1500);
+    // }
+    //
+    // // 禁用渠道
+    // function jyBtn(this3) {
+    //     var Row3 = $(this3).parents('tr').eq(0);
+    //     var sz3 = $("#example").dataTable().fnGetData(Row3);
+    //     $.ajax({
+    //         type: "post",
+    //         url: "/api/channel/save",
+    //         data: JSON.stringify({id: sz3.id, name: sz3.name, status: 0}),
+    //         asasync: true,
+    //         cache: false,
+    //         contentType: 'application/json',
+    //         success: function (e) {
+    //             alert('禁用成功');
+    //             window.location.href = "qdst.html";
+    //         }
+    //     })
+    // }
 </script>
 </body>
 </html>
