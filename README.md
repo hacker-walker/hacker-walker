@@ -42,6 +42,7 @@ walker开源作品   个人博客:https://wuxf.cn
 | Hacker-framework-common  | 框架的各种牛逼配置   |
 | Hacker-framework-model  |  数据库核心实体类  |
 | Hacker-govern-gateway(center)  |  网关  |
+| Hacker-framework-util  |  工具类  |
 
 
 
@@ -90,7 +91,7 @@ walker开源作品   个人博客:https://wuxf.cn
 ```
 后台管理界面
 ```
-![后台界面](https://i.loli.net/2019/06/12/5d0116272f20860687.png)
+![后台界面](https://images.gitee.com/uploads/images/2019/0613/111333_0edb6d4e_2127888.png)
 ### 友情链接
 
 - 作者:低调小熊猫 博客：https://aodeng.cc （我们不改变世界，我们跟着世界改变）微信公众号：低调小熊猫   
