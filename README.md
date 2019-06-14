@@ -30,7 +30,17 @@ walker开源作品   个人博客:https://wuxf.cn
 ### 账号
     
 ```
-后台登录：账号：admin 密码：abc123
+1.登录测试:
+	访问URL: http://localhost:8888/success
+	如果未登录会直接跳到登录页: http://localhost:8888/dr
+2.登录账号说明:
+     此处没有放服务器数据库,后面会放sql语句
+     账户名：admin
+     密码：abc123
+     验证码(这个还没做，后面会放上去)
+3.登录成功后会跳转到相关的成功页面
+4.用户信息显示(登陆后)
+	URL: http://localhost:8888/qdst
 
 后端API管理：localhost:8888/swagger-ui.html
 ```
