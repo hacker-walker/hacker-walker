@@ -5,6 +5,7 @@ import hacker.framework.common.request.BaseResult;
 import hacker.framework.common.request.ResultBean;
 import hacker.framework.model.entity.Admin;
 import hacker.framework.util.SHA256;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.SecurityUtils;
@@ -29,6 +30,7 @@ import javax.servlet.http.HttpSession;
 @Slf4j
 @RestController
 @RequestMapping("/api")
+@Api(value = "页面入口", description = "页面入口管理")
 @CrossOrigin(methods = { RequestMethod.GET, RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE }, origins = "*")
 public class LoginController {
 
@@ -40,6 +42,26 @@ public class LoginController {
     @Value("${salt}")
     private String slat;
 
+
+    /***
+     * 首页
+     * @return
+     */
+    @ApiOperation(value = "首页", notes = "首页")
+    @GetMapping(value = {"/", "/templates/dr", "/dr"})
+    public String dr() {
+        return "templates/dr";
+    }
+
+    /***
+     * 登录
+     * @return
+     */
+    @ApiOperation(value = "登录", notes = "登录")
+    @GetMapping("/login")
+    public String login() {
+        return "templates/dr";
+    }
 
     /**
      * 登陆
