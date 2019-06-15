@@ -7,7 +7,15 @@ Hello,Welcome to boot...SpringBoot的版本号:v2.0.7.RELEASE 项目制作人:Lu
 
     开发不易，希望您可以保留一下版权声明。笔芯💗💗💗
 ```
-walker开源作品   个人博客:https://wuxf.cn   
+<h1><a href="#">Hacker-walker</a></h1>
+
+🇨🇳简体中文 | 🇺🇸[English](./README-EN.md) | [更新日志](https://gitee.com/walker-cloud/Hacker-walker)
+
+[![author](https://img.shields.io/badge/author-walker-blue.svg)](https://wuxf.cn)
+[![JDK](https://img.shields.io/badge/JDK-1.8-orange.svg)](https://github.com/hacker-walker/Hacker-walker)
+[![license](https://img.shields.io/badge/license-GPL--3.0-red.svg)](https://github.com/hacker-walker/Hacker-walker/releases/tag/3.0)
+[![QQ群](https://img.shields.io/badge/chat-walkerQQ%E7%BE%A4-yellow.svg)](https://jq.qq.com/?_wv=1027&k=5mjexzD)
+[![发行版本](https://img.shields.io/badge/release-3.0-green.svg)](https://github.com/hacker-walker/Hacker-walker/releases)  
 
 微信公众号:堇夏年华
 
