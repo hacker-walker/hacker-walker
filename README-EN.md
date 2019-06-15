@@ -31,3 +31,78 @@ On the way of life, we harvest the inexhaustible gift of the God of life, and se
 Netease Mailbox Communication: a18627830855@163.com   | QQ Communication: 1722009230   | wx Communication: 18627830855   | QQ-Group Communication：741413607
 
 ```
+### Account number
+```
+1.Logon test:
+     Visit URL: http://localhost:8888/success
+     If you are not logged in, you will jump directly to the login page: http://localhost:8888/dr
+2.Login account description:
+     Login account shows that there is no server database, and SQL statement will be placed later
+     Account Name：admin
+     Password：abc123
+     Verification code (this is not done yet, it will be put on later)
+3.After successful login, it will jump to the relevant success page
+4.User Information Display (after login)
+     URL: http://localhost:8888/qdst
+
+Backend API management：localhost:8888/swagger-ui.html
+```
+### Modular Partitioning
+| Modular   | Interpretation   |
+| -- | -- |
+| Hacker-service-channel-manage  |  Background management module,Mapper,Service etc |
+| Hacker-framework-common  | Various forcing configurations for iso-frameworks   |
+| Hacker-framework-model  |  Database Core Entity Class  |
+| Hacker-govern-gateway(center)  |  gateway  |
+| Hacker-framework-util  |  Tool class  |
+
+### Instructions
+```
+1.Use command pull substitution code：
+    git clone https://gitee.com/walker-cloud/Hacker-walker.git 
+2.Create a database：jinnian(jin nian)， character set：utf8;（Note: All you need to do is create a database）
+3.IDEA is the best way to import this project
+4.Warehouse Configuration
+    open Settings option——》Choice Build Tools The following Maven tab——》Configure your own warehouse under Maven home direcdtory
+5.Modify configuration
+    A.open application.properties，Configure database connection
+          datasource:
+              url: Your database address
+              username: Your database username
+              password: Your database password
+6.Running Project (Background Management Module)
+    a.Direct operation hacker.channel.manage App in Directory
+    b.Browser access：http://127.0.0.1:8888
+```
+### Thank
+- Hacker-walker The birth of the project is inseparable from the following (take open source, use open source)：
+- Spring Boot：Core Framework
+- Apache Shiro：Permission Framework
+- Thymeleaf：template engine
+- MyBatis-plus：Be used for Java Of MyBatis SQL Mapper frame
+- alibaba/druid：Database connection pool
+- alibaba/fastjson：Fast JSON parser/generator for Java
+- Lombok：Make the code more concise
+- swagger：Swagger（Swagger）The most popular API expression tool in the world。
+- Html5：Front-end page
+
+### Framework demonstration
+```
+At present, it is still in perfect development, and will be put here to show the effect, please laugh!
+```
+```
+Login interface
+```
+![Login interface](https://images.gitee.com/uploads/images/2019/0610/180431_93d56664_2127888.png)
+```
+Background management interface
+```
+![Background management interface](https://images.gitee.com/uploads/images/2019/0613/111333_0edb6d4e_2127888.png)
+### Friendship Links
+
+- Author: Low-key Panda  Blog：https://aodeng.cc （Reading ten thousand books, traveling ten thousand miles, making a lot of money）Wechat Public Number: Low-key Panda  
+- Author:walker Blog：https://wuxf.cn (Unknown Partners in Australia) Wechat Public Number：jin xia nian hua
+
+### Last
+http://doc.zengrong.net/smart-questions/cn.html   
+In order to prevent the world from being destroyed, in order to love and justice, it is recommended to look at the wisdom of asking questions.

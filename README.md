@@ -30,10 +30,8 @@ Hello,Welcome to boot...SpringBoot的版本号:v2.0.7.RELEASE 项目制作人:Lu
        人生路上，泪水在左，欢笑在右，生命的鲜花铺满两旁。
        走过生命的四季，我们经历了泪水的洗礼，见证了欢笑的时刻，欣赏着朝阳的升起，凝视着花蕊的绽放。
        人生途中，我们收获着生命之神不尽的惠赠，满揣着她的礼物与祝福启程。一路走来，因为收获，我们不曾寒冷，我们从未孤独。
-
-       
+   
     网易邮箱 交流: a18627830855@163.com   | QQ 交流: 1722009230   | wx 交流: 18627830855   | QQ群 交流：741413607
-
 
 ### 账号
     
@@ -62,8 +60,6 @@ Hello,Welcome to boot...SpringBoot的版本号:v2.0.7.RELEASE 项目制作人:Lu
 | Hacker-govern-gateway(center)  |  网关  |
 | Hacker-framework-util  |  工具类  |
 
-
-
 ### 使用说明 
 ```
 1.使用命令拉取代码：
@@ -82,7 +78,6 @@ Hello,Welcome to boot...SpringBoot的版本号:v2.0.7.RELEASE 项目制作人:Lu
     a.直接运行hacker.channel.manage目录下的App
     b.浏览器访问：http://127.0.0.1:8888
 ```
-
 
 ### 感谢
 - Hacker-walker的诞生离不开下面这些项目（取之开源，用之开源）：
