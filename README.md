@@ -39,8 +39,8 @@ Hello,Welcome to boot...SpringBoot的版本号:v2.0.7.RELEASE 项目制作人:Lu
     
 ```
 1.登录测试:
-	访问URL: http://localhost:8888/success
-	如果未登录会直接跳到登录页: http://localhost:8888/dr
+     访问URL: http://localhost:8888/success
+     如果未登录会直接跳到登录页: http://localhost:8888/dr
 2.登录账号说明:
      此处没有放服务器数据库,后面会放sql语句
      账户名：admin
@@ -48,7 +48,7 @@ Hello,Welcome to boot...SpringBoot的版本号:v2.0.7.RELEASE 项目制作人:Lu
      验证码(这个还没做，后面会放上去)
 3.登录成功后会跳转到相关的成功页面
 4.用户信息显示(登陆后)
-	URL: http://localhost:8888/qdst
+     URL: http://localhost:8888/qdst
 
 后端API管理：localhost:8888/swagger-ui.html
 ```
@@ -112,7 +112,7 @@ Hello,Welcome to boot...SpringBoot的版本号:v2.0.7.RELEASE 项目制作人:Lu
 ![后台界面](https://images.gitee.com/uploads/images/2019/0613/111333_0edb6d4e_2127888.png)
 ### 友情链接
 
-- 作者:低调小熊猫 博客：https://aodeng.cc （我们不改变世界，我们跟着世界改变）微信公众号：低调小熊猫   
+- 作者:低调小熊猫 博客：https://aodeng.cc （读万卷书，行万里路，赚很多钱）微信公众号：低调小熊猫   
 - 作者:walker 博客：https://wuxf.cn (澳大利亚不知名企业合伙人) 微信公众号：堇夏年华
 
 ### Last
