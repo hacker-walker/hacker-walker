@@ -27,7 +27,7 @@ public class Swagger2Configuration {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("hacker"))
+                .apis(RequestHandlerSelectors.basePackage("hacker"))//看自己定义，可以肆意妄为
                 .paths(PathSelectors.any())
                 .build();
     }
@@ -37,6 +37,7 @@ public class Swagger2Configuration {
         return new ApiInfoBuilder()
                 .title("API文档")
                 .description("API文档")
+                .termsOfServiceUrl("https://www.wuxf.cn")
                 .version("1.0")
                 .build();
     }
