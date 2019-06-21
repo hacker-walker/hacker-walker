@@ -36,7 +36,7 @@ public class ErrorController {
             produces = "application/json, application/xml",
             consumes = "application/json, application/xml")
     @RequestMapping("/error1")
-    public ModelAndView error1(Model model, HttpServletResponse response, HttpServletRequest request) {
+    public ModelAndView error1(Model model, HttpServletResponse response) {
 
         log.info("错误页面");
         response.setStatus(HttpStatus.FORBIDDEN.value());

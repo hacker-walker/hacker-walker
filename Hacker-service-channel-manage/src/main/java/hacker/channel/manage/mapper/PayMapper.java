@@ -24,8 +24,7 @@ public interface PayMapper {
     //保存
     int insertSelective(Pay record);
 
-
-    String Pay(String id, String orderMoney);
+    //String Pay(String id, String orderMoney);
 
     //修改订单状态
     int updateOrderStatus(Pay record);

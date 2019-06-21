@@ -46,7 +46,7 @@ public class PayWxController {
 
     /***
      *
-     * @param paylogDo 订单信息： 用户id，支付金额，渠道id
+     * @param paylogDo 订单信息： 用户id，支付金额，账号id
      * @param //address 加密经纬度
      * @return
      */
