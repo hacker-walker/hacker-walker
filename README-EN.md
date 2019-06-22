@@ -23,7 +23,7 @@ Wechat Public Number:Jin Xia Nian Hua
 ### brief introduction
    **Project address：https://gitee.com/walker-cloud/Hacker-walker**
 ```
-      **In 2019, I wish everyone who works hard a reward**
+     In 2019, I wish everyone who works hard a reward
 On the road of life, tears are on the left, laughter is on the right, and flowers of life are on both sides.
 Through the four seasons of life, we experienced the baptism of tears, witnessed the moment of laughter, appreciated the rise of the morning sun, gazed at the blooming of flower stamens.
 On the way of life, we harvest the inexhaustible gift of the God of life, and set out with her gifts and blessings. All the way, because of the harvest, we have never been cold, we have never been lonely.
