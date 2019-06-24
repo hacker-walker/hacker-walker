@@ -74,7 +74,7 @@ public class RoleServiceImpl implements RoleService {
         //根据角色id查询该角色对应的所有权限--->map
         List<Map> maps = permissionMapper.queryByRole(id);
         QueryWrapper wrapper = new QueryWrapper();
-        wrapper.eq("status", 1);  //-------------->对应数据库权限的状态，查询为禁用的数据
+        wrapper.eq("status", 1);  //------------>对应数据库权限的状态，查询为禁用的数据
         //根据 Wrapper 条件，查询全部
         List<Map<String, Object>> maps1 = permissionMapper.selectMaps(wrapper);
         //将该角色有的权限id拿出来
@@ -82,13 +82,13 @@ public class RoleServiceImpl implements RoleService {
             Long pid = (Long) map.get("id");
             ids.add(pid);
         });
-        //遍历所有的权限，取出一级，如果是该角色有的，做上私人标记------------------》有对应的权限会带上标记
+        //遍历所有的权限，取出一级，如果是该角色有的，做上私人标记-----------》有对应的权限会带上标记
         maps1.forEach(map -> {
             Long pid = (Long) map.get("id");
             if (ids.contains(pid)) {
                 map.put("selected", 1);
             }
-            Integer parentId = (Integer) map.get("parentId");  //-----------------------》父类id等于0，就是最高权限---->一级权限
+            Integer parentId = (Integer) map.get("parentId");  //----------》父类id等于0，就是最高权限---->一级权限
             //筛选出一级权限
             if (0 == parentId) {
                 //将一级权限先放入返回值中
@@ -97,7 +97,7 @@ public class RoleServiceImpl implements RoleService {
                 keys.put(pid.toString(), result.size() - 1);
             }
         });
-        //遍历二级，组装到一级下------------------》没有对应的权限不会带上标记，但是也会全部显示出来
+        //遍历二级，组装到一级下-----------》没有对应的权限不会带上标记，但是也会全部显示出来
         maps1
                 .stream()
                 //过滤掉一级

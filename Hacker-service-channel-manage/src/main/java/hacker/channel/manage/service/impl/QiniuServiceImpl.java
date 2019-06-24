@@ -30,7 +30,7 @@ public class QiniuServiceImpl implements QiniuService {
 
     private static final Logger logger = LoggerFactory.getLogger(QiniuServiceImpl.class);
 
-    // 设置好账号的ACCESS_KEY和SECRET_KEY
+    //设置好账号的ACCESS_KEY和SECRET_KEY
     //这里我就不放真实的账号了
     String ACCESS_KEY = "XPzvjptibbtEy3eZHjra-RVcTIMTsdhVO";
     String SECRET_KEY = "sKKfdLMhBJW9WjGesF71WztrX-VjaEt84";
@@ -45,11 +45,12 @@ public class QiniuServiceImpl implements QiniuService {
     // ...其他参数参考类注释
     UploadManager uploadManager = new UploadManager(cfg);
 
-    // 测试域名，只有30天有效期-----》自己去调⑧
+    // 测试域名，只有30天有效期-----》自己去调
     private static String QINIU_IMAGE_DOMAIN = "http://t.wechat.mengpark.cn/";
 
     // 简单上传，使用默认策略，只需要设置上传的空间名就可以了
     public String getUpToken() {
+
         return auth.uploadToken(bucketname);
     }
 

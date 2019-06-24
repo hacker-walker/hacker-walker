@@ -19,10 +19,13 @@ import java.util.List;
 @Mapper
 public interface AdminMapper extends BaseMapper<Admin> {
 
+    //通过用户名查询
     Admin findByName(String username);
 
+    //修改用户状态
     int updateUserStatus(Admin user);
 
+    //删除账户角色
     void deleteAdminRole(Integer id);
 
     //调用了封装的obj方法

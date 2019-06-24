@@ -68,7 +68,7 @@ public class PayServiceImpl implements PayService {
         insertPay.setPayStatus(3);//支付状态：1-成功；2-失败；3-等待支付
         insertPay.setPayType(1);//支付方式：1-支付宝；2-微信；3-银联
         insertPay.setGmtCreate(new Date());
-        insertPay.setMerchantOutOrderNo(merchantOutOrderNo); //编号
+        insertPay.setMerchantOutOrderNo(merchantOutOrderNo); //订单编号
 
         //调用添加的方法
         payMapper.insertSelective(insertPay);

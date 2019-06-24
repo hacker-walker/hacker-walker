@@ -20,10 +20,13 @@ import java.util.List;
 @Repository
 public interface RoleMapper extends BaseMapper<Role> {
 
+    //查询用户的角色
     List<Role> queryRolesUser(Admin user);
 
+    //删除角色对应的权限
     void deleteRolePermission(Integer id);
 
+    //删除账号角色
     void deleteAdminRole(Integer id);
 
     //调用了封装的obj方法
