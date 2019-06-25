@@ -54,6 +54,7 @@ public class LimiterAspect {
         String user = sessionId + ":" + JSON.toJSONString(point.getArgs());
         String userHash = String.valueOf(user.hashCode());
 
+        //判断登陆次数
         if (!doLimiter(route, userHash, limit, expire)) {
             throw new RuntimeException("操作太过频繁，请勿重复点击！");
         }

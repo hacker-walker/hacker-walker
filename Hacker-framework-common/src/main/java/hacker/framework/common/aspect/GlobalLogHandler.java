@@ -33,7 +33,7 @@ public class GlobalLogHandler {
 
 
     //加载包路径
-    @Around(value = "execution(* hacker.channel.manage.controller..*.*(..))")
+    @Around(value = "execution(* hacker.*.manage.controller..*.*(..))")
     public Object doAround(ProceedingJoinPoint pjp) throws Throwable {
 
         long startTime = System.currentTimeMillis();

@@ -14,6 +14,7 @@ public enum BaseExceptionEnum {
     NOT_LOGIN(10001, "操作会话已失效，请重新登录！"),
     NOT_PERMISSION(10002, "您无该权限"),
 
+    //目前就用到成功和失败
     EC00000200(200, "success"),
     EC00000500(500, "系统异常"),
     EC00000404(404, "该接口不存在"),

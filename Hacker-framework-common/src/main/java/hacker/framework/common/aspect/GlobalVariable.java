@@ -24,6 +24,9 @@ public class GlobalVariable {
     @Value("${token}")
     private String token;
 
+    /**
+     * secret
+     */
     @Value("${secret}")
     private String secret;
 

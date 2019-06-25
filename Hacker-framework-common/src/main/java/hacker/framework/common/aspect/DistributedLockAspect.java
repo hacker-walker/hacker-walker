@@ -37,7 +37,7 @@ public class DistributedLockAspect {
     @Autowired
     private LockUtils lockUtils;
 
-
+    //当前锁的：自动过期时间
     @Around(value = "@annotation(hacker.framework.common.annotation.DistributedLock)")
     public Object around(ProceedingJoinPoint point) throws Throwable {
 
@@ -52,7 +52,7 @@ public class DistributedLockAspect {
 
         // key
         // sessionId
-        Serializable sessionId = null; // TODO SessionUtils.getSessionId();
+        Serializable sessionId = null;   // TODO SessionUtils.getSessionId();
         // methodName
         String fullMethodName = getFullMethodName(method);
         // hashCode
