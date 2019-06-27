@@ -15,6 +15,7 @@ It's not easy to develop,I hope you can keep the copyright declaration for a whi
 [![license](https://img.shields.io/badge/license-GPL--3.0-red.svg)](https://github.com/hacker-walker/Hacker-walker/releases/tag/3.0)
 [![QQ群](https://img.shields.io/badge/chat-walkerQQ%E7%BE%A4-yellow.svg)](https://jq.qq.com/?_wv=1027&k=5mjexzD)
 <a href="https://github.com/hacker-walker/Hacker-walker"><img alt="star" src="https://img.shields.io/github/stars/hacker-walker/hacker-walker.svg?label=Stars&style=social"/></a>
+[![star](https://gitee.com/walker-cloud/Hacker-walker/badge/star.svg?theme=dark)](https://gitee.com/walker-cloud/Hacker-walker/stargazers)
 [![发行版本](https://img.shields.io/badge/release-3.0-green.svg)](https://github.com/hacker-walker/Hacker-walker/releases)  
 
 Wechat Public Number:Jin Xia Nian Hua
