@@ -94,20 +94,6 @@
             color: white;
         }
 
-        .rBtn {
-            background-color: rgb(236, 71, 88) !important;
-        }
-
-        #example_info {
-            margin-left: 2% !important;
-            margin-top: 15px;
-        }
-
-        .dataTables_paginate {
-            margin-top: 10px;
-            margin-right: 3%;
-        }
-
         .box-min {
             width: 100%;
             height: 98%;
@@ -253,6 +239,7 @@
         </div>
         <table cellspacing="0" class="stTable" id="example">
             <thead>
+    <!--  所占百分比 -->
             <tr>
                 <td width="10%">用户ID</td>
                 <td width="15%">登陆名称</td>
@@ -284,20 +271,6 @@
     console.log(yhm);
     $('.yhm').html(yhm);
 
-    // 日期
-    function getDay(num, str) {
-        var today = new Date();
-        var nowTime = today.getTime();
-        var ms = 24 * 3600 * 1000 * num;
-        today.setTime(parseInt(nowTime + ms));
-        var oYear = today.getFullYear();
-        var oMoth = (today.getMonth() + 1).toString();
-        if (oMoth.length <= 1) oMoth = '0' + oMoth;
-        var oDay = today.getDate().toString();
-        if (oDay.length <= 1) oDay = '0' + oDay;
-        return oYear + str + oMoth + str + oDay;
-    }
-
 
     $('.titleRight').mouseenter(function () {
         $('.titleNone').css({
@@ -317,7 +290,7 @@
         $(this).next().toggle(500);
     })
 
-
+    //表格
     $('#example').DataTable({
         bAutoWidth: false,//自动宽度
         bDeferRender: true,//延迟渲染
