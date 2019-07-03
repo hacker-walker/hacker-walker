@@ -1,6 +1,7 @@
 package hacker.channel.manage.controller;
 
 import hacker.channel.manage.service.AdminService;
+import hacker.framework.common.object.ResultUtil;
 import hacker.framework.common.request.BaseResult;
 import hacker.framework.common.request.ResultBean;
 import hacker.framework.model.entity.Admin;
@@ -14,7 +15,9 @@ import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -105,8 +108,6 @@ public class LoginController {
             return new BaseResult("500","登陆失败，用户名或密码错误",0);
         }
     }
-
-
 
 
     @GetMapping("/logout")

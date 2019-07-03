@@ -40,6 +40,6 @@ public class ErrorController {
         log.info("错误页面");
         response.setStatus(HttpStatus.FORBIDDEN.value());
 
-        return ResultUtil.view("templates/error/010");
+        return ResultUtil.view("templates/error/010.html");
     }
 }
