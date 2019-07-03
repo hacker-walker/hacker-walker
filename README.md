@@ -107,6 +107,9 @@ Hello,Welcome to boot...SpringBoot的版本号:v2.0.7.RELEASE 项目制作人:Lu
 后台管理界面
 ```
 ![后台界面](https://images.gitee.com/uploads/images/2019/0613/111333_0edb6d4e_2127888.png)
+![1](https://i.loli.net/2019/07/03/5d1c86bc6c7ea38735.png)
+![2](https://i.loli.net/2019/07/03/5d1c85d68842516271.png)
+![3](https://i.loli.net/2019/07/03/5d1c866c0790c69035.png)
 ### 友情链接
 
 - 作者:低调小熊猫 博客：https://aodeng.cc （读万卷书，行万里路，赚很多钱）微信公众号：低调小熊猫   
