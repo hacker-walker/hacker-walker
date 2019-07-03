@@ -100,9 +100,9 @@ Login interface
 Background management interface
 ```
 ![Background management interface](https://images.gitee.com/uploads/images/2019/0613/111333_0edb6d4e_2127888.png)
-![1](https://i.loli.net/2019/07/03/5d1c86bc6c7ea38735.png)
-![2](https://i.loli.net/2019/07/03/5d1c85d68842516271.png)
-![3](https://i.loli.net/2019/07/03/5d1c866c0790c69035.png)
+![1](https://i.loli.net/2019/07/03/5d1c94263e68624395.png)
+![2](https://i.loli.net/2019/07/03/5d1c943d8714f56661.png)
+![3](https://i.loli.net/2019/07/03/5d1c9443c143583430.png)
 ### Friendship Links
 
 - Author: Low-key Panda  Blog：https://aodeng.cc （Reading ten thousand books, traveling ten thousand miles, making a lot of money）Wechat Public Number: Low-key Panda  
