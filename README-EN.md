@@ -105,7 +105,7 @@ Background management interface
 ![3](https://i.loli.net/2019/07/03/5d1c9443c143583430.png)
 ### Friendship Links
 
-- Author: Low-key Panda  Blog：https://aodeng.cc （Reading ten thousand books, traveling ten thousand miles, making a lot of money）Wechat Public Number: Low-key Panda  
+- Author: Low-key Panda  Blog：http://ilovey.live （Reading ten thousand books, traveling ten thousand miles, making a lot of money）Wechat Public Number: Low-key Panda  
 - Author:walker Blog：https://wuxf.cn (Unknown Partners in Australia) Wechat Public Number：jin xia nian hua
 
 ### Last

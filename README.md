@@ -112,7 +112,7 @@ Hello,Welcome to boot...SpringBoot的版本号:v2.0.7.RELEASE 项目制作人:Lu
 ![3](https://i.loli.net/2019/07/03/5d1c9443c143583430.png)
 ### 友情链接
 
-- 作者:低调小熊猫 博客：https://aodeng.cc （读万卷书，行万里路，赚很多钱）微信公众号：低调小熊猫   
+- 作者:低调小熊猫 博客：http://ilovey.live （读万卷书，行万里路，赚很多钱）微信公众号：低调小熊猫   
 - 作者:walker 博客：https://wuxf.cn (澳大利亚不知名企业合伙人) 微信公众号：堇夏年华
 
 ### Last
