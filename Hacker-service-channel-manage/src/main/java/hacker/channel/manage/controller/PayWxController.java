@@ -19,7 +19,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @program:J X N H
+ * @Description: J X N H
  * @EnglishName LuKe
  * @authod LiuQi(walker)
  * @date 2019/5/15 10:47

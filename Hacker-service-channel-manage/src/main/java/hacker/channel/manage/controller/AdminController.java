@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.*;
  *
  * @Description: J X N H
  * @EnglishName LuKe
- * @authod LiuQi(walker)
+ * @author  LiuQi(walker)
  * @date 2019/6/3 16:17
  */
 @Slf4j

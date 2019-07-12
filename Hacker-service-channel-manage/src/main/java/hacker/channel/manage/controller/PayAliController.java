@@ -10,9 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * @program:J X N H
+ * @Description: J X N H
  * @EnglishName LuKe
- * @authod LiuQi(walker)
+ * @author LiuQi(walker)
  * @date 2019/6/4 16:47
  * 支付宝支付
  */

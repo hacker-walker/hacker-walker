@@ -21,7 +21,7 @@ import java.util.Map;
  * 支付回调
  * @Description: J X N H
  * @EnglishName LuKe
- * @authod LiuQi(walker)
+ * @author LiuQi(walker)
  * @date 2019/6/9 19:14
  */
 @RestController

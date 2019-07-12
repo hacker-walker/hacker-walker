@@ -1,7 +1,6 @@
 package hacker.channel.manage.controller;
 
 import hacker.channel.manage.service.AdminService;
-import hacker.framework.common.object.ResultUtil;
 import hacker.framework.common.request.BaseResult;
 import hacker.framework.common.request.ResultBean;
 import hacker.framework.model.entity.Admin;
@@ -15,9 +14,7 @@ import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -27,7 +24,7 @@ import javax.servlet.http.HttpSession;
  * admin用户登陆界面
  * @Description: J X N H
  * @EnglishName LuKe
- * @authod LiuQi(walker)
+ * @author LiuQi(walker)
  * @date 2019/6/3 14:14
  */
 @Slf4j
