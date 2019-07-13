@@ -120,3 +120,6 @@ Hello,Welcome to boot...SpringBoot的版本号:v2.0.7.RELEASE 项目制作人:Lu
 http://doc.zengrong.net/smart-questions/cn.html
 
     In order to prevent the world from being destroyed, in order to love and justice, it is recommended to look at the wisdom of asking questions.
+
+## 你的点赞鼓励，是我前进的动力
+![笔芯](https://i.loli.net/2019/07/13/5d29c699493f847597.png)
