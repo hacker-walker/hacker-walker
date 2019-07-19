@@ -52,6 +52,7 @@ Backend API management：localhost:8888/swagger-ui.html
 ### Modular Partitioning
 | Modular   | Interpretation   |
 | -- | -- |
+| Hacker-db | DatabaseSql |
 | Hacker-service-channel-manage  |  Background management module,Mapper,Service etc |
 | Hacker-framework-common  | Various forcing configurations for iso-frameworks   |
 | Hacker-framework-model  |  Database Core Entity Class  |

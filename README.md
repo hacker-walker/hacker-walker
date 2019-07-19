@@ -56,6 +56,7 @@ Hello,Welcome to boot...SpringBoot的版本号:v2.0.7.RELEASE 项目制作人:Lu
 ### 模块划分
 | 模块   | 释义   |
 | -- | -- |
+| Hacker-db | 数据库sql |
 | Hacker-service-channel-manage  |  后台管理模块,Mapper,Service等 |
 | Hacker-framework-common  | 框架的各种牛逼配置   |
 | Hacker-framework-model  |  数据库核心实体类  |
