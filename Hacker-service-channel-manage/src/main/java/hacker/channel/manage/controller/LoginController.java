@@ -53,15 +53,6 @@ public class LoginController {
         return "templates/dr";
     }
 
-    /***
-     * 登录
-     * @return
-     */
-    @ApiOperation(value = "登录", notes = "登录")
-    @GetMapping("/login")
-    public String login() {
-        return "templates/dr";
-    }
 
     /**
      * 登陆
