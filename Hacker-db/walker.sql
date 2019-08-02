@@ -1,9 +1,8 @@
-<-- 数据库数据展示 -->
 /*
-SQLyog Ultimate v8.32
+SQLyog Ultimate v8.32 
 MySQL - 8.0.15 : Database - jinnian
 *********************************************************************
-*/
+*/
 
 /*!40101 SET NAMES utf8 */;
 
@@ -38,7 +37,7 @@ CREATE TABLE `tb_admin` (
 
 /*Data for the table `tb_admin` */
 
-insert  into `tb_admin`(`id`,`username`,`password`,`phone`,`status`,`is_readonly`,`last_login_ip`,`last_login_token`,`login_at`,`created_at`,`updated_at`) values (1,'admin','9feb61735eae35a19c709cdcda699f80e087bc3f0e1049768fbb457a0d38702b','admin',1,1,'192.168.101.9','4e7ead6c8d6e4167ae4f13aac878956a','2019-06-16 10:39:15','2019-05-26 10:14:15','2019-05-26 10:14:15');
+insert  into `tb_admin`(`id`,`username`,`password`,`phone`,`status`,`is_readonly`,`last_login_ip`,`last_login_token`,`login_at`,`created_at`,`updated_at`) values (1,'admin','9feb61735eae35a19c709cdcda699f80e087bc3f0e1049768fbb457a0d38702b','admin',1,1,'172.20.10.2','d55f2b281e2d4fd38835ceafd4a39566','2019-08-02 15:38:37','2019-05-26 10:14:15','2019-05-26 10:14:15');
 
 /*Table structure for table `tb_admin_role` */
 
@@ -53,6 +52,26 @@ CREATE TABLE `tb_admin_role` (
 /*Data for the table `tb_admin_role` */
 
 insert  into `tb_admin_role`(`role_id`,`admin_id`) values (1,1),(1,2),(2,1);
+
+/*Table structure for table `tb_pay` */
+
+DROP TABLE IF EXISTS `tb_pay`;
+
+CREATE TABLE `tb_pay` (
+  `tradeNo` int(64) unsigned NOT NULL AUTO_INCREMENT COMMENT '用户订单号',
+  `userId` int(64) NOT NULL,
+  `adminId` int(32) NOT NULL,
+  `payTime` timestamp NULL DEFAULT CURRENT_TIMESTAMP COMMENT '支付时间',
+  `payStatus` int(2) NOT NULL DEFAULT '1' COMMENT '支付状态',
+  `payType` int(2) NOT NULL DEFAULT '1' COMMENT '支付方式',
+  `gmtCreate` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `merchantOutOrderNo` varchar(64) DEFAULT NULL COMMENT '商家支付订单号',
+  PRIMARY KEY (`tradeNo`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+/*Data for the table `tb_pay` */
+
+insert  into `tb_pay`(`tradeNo`,`userId`,`adminId`,`payTime`,`payStatus`,`payType`,`gmtCreate`,`merchantOutOrderNo`) values (1,1,1,'2019-08-02 16:02:15',1,1,'2019-08-02 16:02:15','121');
 
 /*Table structure for table `tb_permission` */
 
