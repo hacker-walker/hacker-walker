@@ -52,12 +52,12 @@ Backend API management：localhost:8888/swagger-ui.html
 ### Modular Partitioning
 | Modular   | Interpretation   |
 | -- | -- |
-| Hacker-db | DatabaseSql |
-| Hacker-service-channel-manage  |  Background management module,Mapper,Service etc |
-| Hacker-framework-common  | Various forcing configurations for iso-frameworks   |
-| Hacker-framework-model  |  Database Core Entity Class  |
-| Hacker-govern-gateway(center)  |  gateway  |
-| Hacker-framework-util  |  Tool class  |
+| hacker-db | DatabaseSql |
+| hacker-service-channel-manage  |  Background management module,Mapper,Service etc |
+| hacker-framework-common  | Various forcing configurations for iso-frameworks   |
+| hacker-framework-model  |  Database Core Entity Class  |
+| hacker-govern-gateway(center)  |  gateway  |
+| hacker-framework-util  |  Tool class  |
 
 ### Instructions
 ```
@@ -78,7 +78,7 @@ Backend API management：localhost:8888/swagger-ui.html
     b.Browser access：http://127.0.0.1:8888
 ```
 ### Thank
-- Hacker-walker The birth of the project is inseparable from the following (take open source, use open source)：
+- hacker-walker The birth of the project is inseparable from the following (take open source, use open source)：
 - Spring Boot：Core Framework
 - Apache Shiro：Permission Framework
 - Thymeleaf：template engine

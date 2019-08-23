@@ -56,12 +56,12 @@ Hello,Welcome to boot...SpringBoot的版本号:v2.0.7.RELEASE 项目制作人:Lu
 ### 模块划分
 | 模块   | 释义   |
 | -- | -- |
-| Hacker-db | 数据库sql |
-| Hacker-service-channel-manage  |  后台管理模块,Mapper,Service等 |
-| Hacker-framework-common  | 框架的各种牛逼配置   |
-| Hacker-framework-model  |  数据库核心实体类  |
-| Hacker-govern-gateway(center)  |  网关  |
-| Hacker-framework-util  |  工具类  |
+| hacker-db | 数据库sql |
+| hacker-service-channel-manage  |  后台管理模块,Mapper,Service等 |
+| hacker-framework-common  | 框架的各种牛逼配置   |
+| hacker-framework-model  |  数据库核心实体类  |
+| hacker-govern-gateway(center)  |  网关  |
+| hacker-framework-util  |  工具类  |
 
 ### 使用说明 
 ```
@@ -83,7 +83,7 @@ Hello,Welcome to boot...SpringBoot的版本号:v2.0.7.RELEASE 项目制作人:Lu
 ```
 
 ### 感谢
-- Hacker-walker的诞生离不开下面这些项目（取之开源，用之开源）：
+- hacker-walker的诞生离不开下面这些项目（取之开源，用之开源）：
 - Spring Boot：核心框架
 - Apache Shiro：权限框架
 - Thymeleaf：模板引擎
