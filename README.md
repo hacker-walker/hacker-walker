@@ -7,17 +7,17 @@ Hello,Welcome to boot...SpringBoot的版本号:v2.0.7.RELEASE 项目制作人:Lu
 
     开发不易，希望您可以保留一下版权声明。 笔芯💗💗💗
 ```
-<h1><a href="#">Hacker-walker</a></h1>
+<h1><a href="#">hacker-walker</a></h1>
 
-🇨🇳简体中文 | 🇺🇸[English](./README-EN.md) | [更新日志](https://gitee.com/walker-cloud/Hacker-walker)
+🇨🇳简体中文 | 🇺🇸[English](./README-EN.md) | [更新日志](https://gitee.com/walker-cloud/hacker-walker)
 
 [![author](https://img.shields.io/badge/author-walker-blue.svg)](https://wuxf.cn)
-[![JDK](https://img.shields.io/badge/JDK-1.8-orange.svg)](https://github.com/hacker-walker/Hacker-walker)
-[![license](https://img.shields.io/badge/license-GPL--3.0-red.svg)](https://github.com/hacker-walker/Hacker-walker/releases/tag/3.0)
+[![JDK](https://img.shields.io/badge/JDK-1.8-orange.svg)](https://github.com/hacker-walker/hacker-walker)
+[![license](https://img.shields.io/badge/license-GPL--3.0-red.svg)](https://github.com/hacker-walker/hacker-walker/releases/tag/3.0)
 [![QQ群](https://img.shields.io/badge/chat-walkerQQ%E7%BE%A4-yellow.svg)](https://jq.qq.com/?_wv=1027&k=5mjexzD)
-<a href="https://github.com/hacker-walker/Hacker-walker"><img alt="star" src="https://img.shields.io/github/stars/hacker-walker/hacker-walker.svg?label=Stars&style=social"/></a>
-[![star](https://gitee.com/walker-cloud/Hacker-walker/badge/star.svg?theme=dark)](https://gitee.com/walker-cloud/Hacker-walker/stargazers)
-[![发行版本](https://img.shields.io/badge/release-3.0-green.svg)](https://github.com/hacker-walker/Hacker-walker/releases)  
+<a href="https://github.com/hacker-walker/hacker-walker"><img alt="star" src="https://img.shields.io/github/stars/hacker-walker/hacker-walker.svg?label=Stars&style=social"/></a>
+[![star](https://gitee.com/walker-cloud/hacker-walker/badge/star.svg?theme=dark)](https://gitee.com/walker-cloud/hacker-walker/stargazers)
+[![发行版本](https://img.shields.io/badge/release-3.0-green.svg)](https://github.com/hacker-walker/hacker-walker/releases)  
 
 微信公众号:堇夏年华
 
@@ -25,7 +25,7 @@ Hello,Welcome to boot...SpringBoot的版本号:v2.0.7.RELEASE 项目制作人:Lu
 
 
 ### 简介
-   **项目地址：https://gitee.com/walker-cloud/Hacker-walker** 
+   **项目地址：https://gitee.com/walker-cloud/hacker-walker** 
 
        2019年，祝每一个努力的人都有所收获 
 
